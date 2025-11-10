@@ -1,0 +1,10 @@
+
+#shu_photo {
+  width: 400px;
+  height: auto;
+}
+
+.about_me_container {
+  display: flex;
+  flex-direction: row;
+}
