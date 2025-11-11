@@ -5,22 +5,40 @@ header {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  align-items: center;
 
 }
 
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .menus {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 让搜索框和菜单分两边 */
+  gap: 1rem;
 }
 .menu_items {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;  
+  gap: 1.0rem;
 }
+
+
+.header_page_quote{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first_page_quote {
+  font-size: 30px;
+}
+
+
 #shu_photo {
   width: 400px;
   height: auto;
