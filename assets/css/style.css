@@ -47,22 +47,33 @@ header {
 
 main {
   background-color: #76a4a7;
-  padding: 5% 15%;
 }
 
+/*Styling of About me Page */
 .about_me {
+  display: flex;
+  flex-direction: row;
   height: 100vh;
 }
 
-#shu_photo {
+.me_description {
+  background-color:#F0D2D1;
+  justify-content: center;
+
+  padding-top:10vh;
+  padding-left: 8vh;
+  padding-right: 5vh;
   width: 30%;
+}
+
+
+
+#shu_photo {
+  width: 60%;
   height: auto;
 }
 
-.about_me_container {
-  display: flex;
-  flex-direction: row;
-}
+
 
 .projects {
   display: flex;
