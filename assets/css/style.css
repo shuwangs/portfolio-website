@@ -1,3 +1,8 @@
+
+:root{
+  font-size: 16px;
+}
+
 header {
   background-image: url('../img/pawsonthekeyboard.svg');
   background-size: cover;
@@ -8,12 +13,15 @@ header {
   align-items: center;
 
 }
-
+#page_name {
+  font-size: 1.5rem;
+}
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin:2% 10%;
 }
 .menus {
   display: flex;
