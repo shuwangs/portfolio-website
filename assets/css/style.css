@@ -93,3 +93,25 @@ main {
   border-radius: 15px;
 
 }
+
+.contact_me {
+  height: 100vh;
+}
+
+.leave_msg_container {
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  max-width: 600px; 
+  width: 100%;
+}
+.leave_msg_container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.leave_msg_container input,
+.leave_msg_container textarea {
+  display: block;
+
+}
