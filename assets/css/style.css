@@ -59,13 +59,11 @@ main {
 .me_description {
   background-color:#F0D2D1;
   justify-content: center;
-
   padding-top:10vh;
   padding-left: 8vh;
   padding-right: 5vh;
-  width: 30%;
+  width: 40%;
 }
-
 
 
 #shu_photo {
@@ -74,13 +72,31 @@ main {
 }
 
 
+.me_right {
+  display: flex;
+  flex-direction: row;
+  padding-top:10vh;
+  padding-left: 5vh;
+  padding-right: 8vh;
+}
 
+.education-content,
+.experience-content {
+  border: 3px dashed #F0D2D1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* --Project --*/
 .projects {
   display: flex;
   flex-direction: column;
-  padding-top: 5%;
-  height:100vh;
+  padding-top: 14%;
+  height: 100vh;
+  text-align: center;
+  margin: 20px;
 }
+
 .project_container {
   display: flex;
   flex-direction: row;
@@ -91,9 +107,12 @@ main {
   padding: 5px;
   border: 3px, solid #d6ccc2;
   border-radius: 15px;
-
+  justify-content: center;
 }
-
+.card-img-top {
+  height: 200px;
+  width: 50%;
+}
 .contact_me {
   height: 100vh;
 }
@@ -113,5 +132,4 @@ main {
 .leave_msg_container input,
 .leave_msg_container textarea {
   display: block;
-
 }
