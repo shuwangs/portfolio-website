@@ -35,11 +35,11 @@
               <button class="btn btn-outline-primary" type="submit">Search</button>
             </form>
             <!-- menu items -->
-            <a class="nav-link" href="#">Resume</a>
+            <a class="nav-link" href="#about_me">About me</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="./blog.html">Blog</a>
             <a class="nav-link" href="./bobo.html">Bobo</a>
-            <a class="nav-link" href="#">Contacts</a>
+            <a class="nav-link" href="#contact_me">Contacts</a>
           </div>
         </div>
       </div>
@@ -57,13 +57,13 @@
     <main class="column">
 
       <!--About Me Page-->
-      <div class="about_me">
+      <div class="about_me" id="about_me">
         <div class="container me_description">
           <h3>Hello</h3>
           <h2>I'm Shu</h2>
           <img id="shu_photo" src="assets/img/shu-photo.jpg" alt="Photo: Shu Wang">
 
-          <div id=about_me>
+          <div id=about_me_detials>
             <h4>Here's how I came here...</h4>
             <p>
               I am a bioinformatician turned software developer who fell in love with coding 
@@ -97,20 +97,25 @@
         </div>
         
         <div class="container me_right">
-          <div class="row row-cols-2">
+          <div class="row row-cols-1 row-cols-lg-2">
             <div class="education-container">
               <div class="education-content">
                 <h2>Education</h2>
-                <ul>
-                  <li>
-                    <p><strong>Georgia Institute of Technology</strong></p>
-                    <p><strong>Master in Computer Science</strong> GPA: 3.66</p>
+                <ul class="education-list">
+                  <li class="edu-item">
+                    <div class="edu-header">
+                      <p class="school"><strong>Georgia Institute of Technology</strong>
+                      <span class="edu-date">2024 - 2027 spring (expected)</span></p>
+                    </div>
+                    <p><strong>Master in Computer Science</strong>, GPA: 3.66</p>
                   </li>
-                  <li>
-                    Research Scientist –
-                    Applied statistical and computational methods to real-world biological problems.
+                  <li class="edu-item">
+                    <div class="edu-header">
+                      <p class="school"><strong>Zhejiang University, CN</strong></p>
+                    </div>
+                    <p>Ph.D. in Plant Pathology</p>
                   </li>
-              </ul>
+                </ul>
               </div>
 
             </div>
@@ -120,19 +125,36 @@
               <div class="experience-content">
               <h2>Work Experience</h2>
                 <ul>
-                  <li>
-                    Data Analyst, Georgetown University –
-                    Automated workflows, implemented reproducible code, collaborated on ML-based biomarker projects.
+                  <li class="experience-item">
+                    <div class="job-item">
+                      <div class="job-header">
+                        <strong>Data Analyst, Georgetown University</strong>
+                        <span class="job-date">Jul 2023— Present</span>
+                      </div>
+                    </div>
+                    <ul class="job-details">
+                      <li>Automated workflows and improved data processing efficiency.</li>
+                      <li>Implemented reproducible and maintainable analytical pipelines.</li>
+                      <li>Collaborated on ML-based biomarker discovery projects.</li>
+                    </ul>
                   </li>
-                  <li>
-                    Research Scientist –
-                    Applied statistical and computational methods to real-world biological problems.
+                  <li class="experience-item">
+                    <div class="job-item">
+                      <div class="job-header">
+                        <strong>Software Engineer in Training, Techtonica</strong>
+                        <span class="job-date">Sep 2025 — Present</span>
+                      </div>
+                    </div>
+                    <ul class="job-details">
+                      <li>Automated workflows and improved data processing efficiency.</li>
+                      <li>Implemented reproducible and maintainable analytical pipelines.</li>
+                      <li>Collaborated on ML-based biomarker discovery projects.</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
 
             </div>
-
           </div>
 
         </div>
@@ -140,9 +162,9 @@
       </div>
 
       <!-- Projects -->
-      <section class="projects">
-        <h1 class="section-title">Recent Projects</h1>
-          <div class="row row-cols-1 row-cols-md-3 g-6 ">
+      <section id="projects" class="projects">
+          <h1 class="section-title">Recent Projects</h1>
+          <div class=" projects_container row">
             <div class="col mt-5">
               <div class="card recent_project" id="job_comparison_app">
                 <img src="assets/img/project-img/job-comparison.jpg" class="card-img-top mx-auto" alt="Job comparison app">
@@ -164,7 +186,7 @@
                 </div>
               </div>
             </div>
-            <div class="col  mt-5">
+            <div class="col mt-5">
               <div class="card recent_project" id="plasma_ev_ml">
                 <img src="#" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -184,12 +206,16 @@
         </div>
         <div>
           <form action="https://formspree.io/f/mldadnld" method="post">
-            <label for="name_input"> Your Name </label>
-            <input id="name_input" type="text" placeholder="name"required />
-            <label for="email_input"> Your Email</label>
-            <input id="email_input" type="email" placeholder="email" required/>
-            <textarea name="message" rows="10" cols="30" 
-             placeholder="Anything you would like to share..." required>
+            <label for="name_input" name="email_input"> Your Name 
+              <input id="name_input" type="text" placeholder="name" name="name_input" required />
+            </label>
+
+            <label for="email_input"> Your Email
+              <input id="email_input" type="email" placeholder="email" name="email_input" required/>
+            </label>
+            
+            <textarea id="message" name="message" rows="10" cols="30" placeholder="Anything you would like to share..."
+            required>
             </textarea>
             <button type="submit">Send</button>
           </form>

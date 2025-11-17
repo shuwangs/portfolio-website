@@ -4,6 +4,7 @@
 }
 body {
   padding-top: 120px;
+  h2: 1.5rem;
 }
 header {
   background-image: url('../img/pawsonthekeyboard.png');
@@ -71,12 +72,25 @@ main {
   width: 40%;
 }
 
-
 #shu_photo {
   width: 60%;
   height: auto;
 }
+.contact_info{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem; 
 
+}
+.social-btn {
+  display: flex;
+  /* align-items: center; */
+  gap: .75rem; 
+  flex-wrap: wrap; 
+  margin-top: 1rem;
+  justify-content: center;
+
+}
 
 .me_right {
   display: flex;
@@ -92,23 +106,36 @@ main {
   border-radius: 10px;
   padding: 10px;
 }
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
 
+.edu-date {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  white-space: nowrap;
+}
 /* --Project --*/
 .projects {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
+  align-items: center;
+  justify-content:  center;
   min-height: 100vh;
   text-align: center;
   margin: 20px;
+  margin-left : 10%;
+  margin-right : 10%;
 }
 
-.project_container {
+.projects_container{
   display: flex;
   flex-direction: row;
-  align-items: space-around;
+  justify-content: center; 
+  gap: 10px;
 }
 .recent_project{
   flex: 1;
@@ -117,20 +144,28 @@ main {
   border-radius: 15px;
   background-color: #ebd6e1;
   height: 50vh;
+  width: 90%;
 }
 .card-img-top {
   height: 200px;
   width: 50%;
+  padding-top :20px;
 }
 
 
-.contact_me {
+#contact_me {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+
 }
 
 .leave_msg_container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: auto;
   max-width: 600px; 
   width: 100%;
@@ -140,7 +175,41 @@ main {
   margin-bottom: 5px;
   font-weight: bold;
 }
+
 .leave_msg_container input,
 .leave_msg_container textarea {
   display: block;
+  border: 2px solid #f0aca8;
+  border-radius: 8px;
+  background-color: #f5ebe0;
+}
+
+.leave_msg_container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f0aca8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.leave_msg_container button:hover {
+  background-color: #ebd6e1;
+}
+
+@media (max-width: 576px) {
+  .about_me {
+    flex-direction: column;
+    align-items: center;
+  }
+  .me_description {
+    width: 80%;
+  }
+  .projects_container {
+    flex-direction: column;
+  }
+
 }
