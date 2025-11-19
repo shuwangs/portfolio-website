@@ -4,8 +4,12 @@
 }
 body {
   padding-top: 120px;
-  h2: 1.5rem;
 }
+
+h2 {
+  font-size: 1.5rem;
+}
+
 header {
   background-image: url('../img/pawsonthekeyboard.png');
   background-size: contain;
@@ -112,7 +116,9 @@ main {
   align-items: baseline;
   margin-bottom: 6px;
 }
-
+.experience_container {
+  margin-top: 20rem;
+}
 .edu-date {
   font-size: 0.9rem;
   opacity: 0.75;
@@ -123,7 +129,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:  center;
+  justify-content: center;
   min-height: 100vh;
   text-align: center;
   margin: 20px;
@@ -137,13 +143,14 @@ main {
   justify-content: center; 
   gap: 10px;
 }
+
 .recent_project{
   flex: 1;
   padding: 5px;
-  border: 3px, solid #ffc5c2;
+  border: 3px solid #ffc5c2;
   border-radius: 15px;
-  background-color: #ebd6e1;
-  height: 50vh;
+  background-color: #f5ebe0;
+  /* height: 50vh; */
   width: 90%;
 }
 .card-img-top {
@@ -151,7 +158,6 @@ main {
   width: 50%;
   padding-top :20px;
 }
-
 
 #contact_me {
   height: 100vh;
@@ -212,4 +218,16 @@ main {
     flex-direction: column;
   }
 
+}
+
+@media(max-width: 992px) {
+  .me_description {
+    width: 100vw;
+  }
+  .me_right {
+    width: 100vw;
+  }
+  .experience_container {
+    margin-top: 2rem;
+  }
 }
