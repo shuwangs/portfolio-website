@@ -1,13 +1,21 @@
 # 🐾 Personal website - Paws on the keyboards
+A clean, responsive, cat-themed personal website built with HTML, CSS, JavaScript, and Bootstrap.
+This portfolio showcases my background, recent projects, blog, and contact information — wrapped in a playful design inspired by my cat Bobo 🐱.
 
-## ✨ Overview
-
-This project demonstrates foundational web development skills in HTML, CSS, and JavaScript, as well as basic Git/GitHub workflow and use of VS Code Developer Tools.
-
-The portfolio highlights my background, recent projects, and contact information — all wrapped in a clean, responsive, and cat-inspired design 🐱.
+## ✨ Features
+- 🎨 Responsive layout optimized for desktop & mobile
+- 📁 Projects section with modern Bootstrap cards
+- 🌐 Hosted on GitHub Pages for easy deployment & updates
 
 ## Tools & Technologies
+- HTML5, CSS3, JavaScript
+- Bootstrap 5
+- Git & GitHub (deployment)
 
+## Deploy (GitHub Pages)
+
+The site is automatically deployed when changes are pushed to main.
+🔗(Live site:)[https://shuwangs.github.io/portfolio-website/]
 
 
 ## Getting Started
