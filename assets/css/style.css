@@ -36,7 +36,6 @@ header {
   font-size: 1.5rem;
 }
 #first_page_quote{
-  margin-top: 3rem;
   color: #F3f3EB;
 }
 .navbar {
@@ -96,6 +95,7 @@ main {
   padding-left: 8%;
   padding-right: 5vh;
   width: 40%;
+  color: #211d25;
 }
 
 #shu_photo {
