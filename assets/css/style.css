@@ -1,9 +1,20 @@
 
 :root{
   font-size: 16px;
+  --bg-color: #211d25;   
+  --text-color: #F3f3EB; 
+  --line-color:#A3B5A9;
 }
+.theme-light{
+  --bg-color: #A3B5A9;
+  --text-color: #211d25;
+  --line-color: #211d25;
+}
+
 body {
-  padding-top: 120px;
+  /* padding-top: 120px; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 h2 {
@@ -12,7 +23,7 @@ h2 {
 
 header {
   background-image: url('../img/pawsonthekeyboard.png');
-  background-color: #12343D;
+  background-color: var(--bg-color);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,6 +36,7 @@ header {
   font-size: 1.5rem;
 }
 #first_page_quote{
+  margin-top: 3rem;
   color: #F3f3EB;
 }
 .navbar {
@@ -36,6 +48,10 @@ header {
   color: #F3f3EB;
 }
 
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
 .nav_content{
   margin: 0 10%;
 }
@@ -44,6 +60,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;  
+  align-items: center;
   gap: 1.0rem;
 }
 
@@ -62,7 +79,7 @@ header {
 }
 
 main {
-  background-color: #A3B5A9;
+  background-color: var(--bg-color);
 }
 
 /*Styling of About me Page */
@@ -211,6 +228,10 @@ main {
   background-color: #CDBDD7;
 }
 
+footer {
+ padding-left: 20vw;
+ border-top: 2px solid var(--line-color);
+}
 @media (max-width: 576px) {
   .about_me {
     flex-direction: column;
@@ -224,6 +245,7 @@ main {
   }
 
 }
+
 
 @media(max-width: 992px) {
   .me_description {

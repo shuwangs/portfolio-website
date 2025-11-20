@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
 
-  <body>
+  <body class="theme-dark">
     <header class="full_page nav-fixed nav-visible" id="page-header" >
       
     <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #211d25;">
@@ -38,12 +38,15 @@
         <a title="Paws on the Keyboard" id="page_name">
           <span>Paws on the Keyboard</span>
         </a>
-        <!-- <div class="page_title">
 
-        </div> -->
-        <button class="navbar-toggler" type="button" 
+        <button id="theme-toggle" class="btn btn-outline-light ms-3">
+          <i class="bi bi-brightness-high-fill"></i>
+        </button>
+        
+        <button class="navbar-toggler" type="button" style="background-color: #CDBDD7;" 
           data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNav" aria-expanded="false" 
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -60,9 +63,13 @@
             <a class="nav-link" href="./blog.html">Blog</a>
             <a class="nav-link" href="./bobo.html">Bobo</a>
             <a class="nav-link" href="#contact_me">Contacts</a>
+
           </div>
+
         </div>
       </div>
+
+
     </nav>
 
     <div class="header_page_quote">
@@ -247,6 +254,7 @@
       
 
     </main>
+    <br><br>
     <footer>
       <p>© 2025 Paws on the Keyboard</p>
       <p>Shu Wang</p>
