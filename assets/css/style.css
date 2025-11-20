@@ -239,6 +239,7 @@ footer {
   }
   .me_description {
     width: 80%;
+    color: #212529;
   }
   .projects_container {
     flex-direction: column;
