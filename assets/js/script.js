@@ -13,4 +13,26 @@
 // })
 
 
-//  2. Form Validation for contact me form
+// 3. toggle light button
+document.addEventListener("DOMContentLoaded", () => {
+  const themeBtn = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  if (!themeBtn) {
+    return;
+  }
+
+  themeBtn.addEventListener("click", () => {
+    if (body.classList.contains("theme-dark")) {
+      body.classList.remove("theme-dark");
+      body.classList.add("theme-light");
+      themeBtn.innerHTML = `<i class="bi bi-moon-fill"></i>`;
+    } else{
+      body.classList.remove("theme-light");
+      body.classList.add("theme-dark");
+      themeBtn.innerHTML = `<i class="bi bi-sun-fill"></i>`;
+    }
+  })
+})
+
+

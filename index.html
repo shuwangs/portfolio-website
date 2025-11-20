@@ -6,32 +6,53 @@
     <title>PawsontheKeyboard</title>
     <meta name="description" content="Shu Wang's personal portfolio website. This is the place documents my
       journey of learning programming and software development.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shu Wang | Software Engineer" />
+    <meta property="og:description" content="Explore Shu's portfolio of software engineering
+    and data projects, including web apps, extensions, and analytics tools." />
+
+    <!-- Profile links for SEO -->
+    <meta property="og:see_also" content="https://www.linkedin.com/in/shuuwang/" />
+    <meta property="og:see_also" content="https://github.com/shuwangs" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0GV0J03NW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZXFZS9PWCJ');
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
 
-  <body>
+  <body class="theme-dark">
     <header class="full_page nav-fixed nav-visible" id="page-header" >
       
-    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #6f8c8d;">
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #211d25;">
       <div class="container-fluid nav_content">
         <a title="Paws on the Keyboard" id="page_name">
           <span>Paws on the Keyboard</span>
         </a>
-        <!-- <div class="page_title">
 
-        </div> -->
-        <button class="navbar-toggler" type="button" 
+        <button id="theme-toggle" class="btn btn-outline-light ms-3">
+          <i class="bi bi-brightness-high-fill"></i>
+        </button>
+        
+        <button class="navbar-toggler" type="button" style="background-color: #CDBDD7;" 
           data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNav" aria-expanded="false" 
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- collapsible menu -->
         <div class="collapse navbar-collapse " id="navbarNav" >
-          <div class="d-flex ms-auto gap-3" id="nav_items">
+          <div class="d-flex ms-auto gap-3 align-items-center" id="nav_items">
             <form class="search_form d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-primary" type="submit">Search</button>
@@ -42,9 +63,13 @@
             <a class="nav-link" href="./blog.html">Blog</a>
             <a class="nav-link" href="./bobo.html">Bobo</a>
             <a class="nav-link" href="#contact_me">Contacts</a>
+
           </div>
+
         </div>
       </div>
+
+
     </nav>
 
     <div class="header_page_quote">
@@ -59,7 +84,7 @@
     <main>
 
       <!--About Me Page-->
-      <div class="about_me" id="about_me">
+      <div class="about_me" id="about_me" tabindex="0">
         <div class="container me_description">
           <h3>Hello</h3>
           <h2>I'm Shu</h2>
@@ -152,9 +177,8 @@
                       </div>
                     </div>
                     <ul class="job-details">
-                      <li>Automated workflows and improved data processing efficiency.</li>
-                      <li>Implemented reproducible and maintainable analytical pipelines.</li>
-                      <li>Collaborated on ML-based biomarker discovery projects.</li>
+                      <li>Intensive training for full-stack development, with a focus on JavaScript and React.</li>
+                      <li>Practice in collaborative development, code reviews and incremental delivery.</li>
                     </ul>
                   </li>
                 </ul>
@@ -168,7 +192,7 @@
       </div>
 
       <!-- Projects -->
-      <section id="projects" class="projects">
+      <section id="projects" class="projects" tabindex="0">
           <h1 class="section-title">Recent Projects</h1>
           <div class=" projects_container row">
             <div class="col mt-5">
@@ -194,7 +218,7 @@
             </div>
             <div class="col mt-5">
               <div class="card recent_project  h-100" id="plasma_ev_ml">
-                <img src="#" class="card-img-top" alt="...">
+                <img src="assets/img/project-img/pdac-ml.jpg" class="card-img-top mx-auto" alt="PDAC EV biomarker prediction image">
                 <div class="card-body">
                   <h5 class="card-title">Plasma biomaker for Pancreatic Cancer Early Detection</h5>
                   <p class="card-text">A collaborative research study investigating metabolites by ML-based biomarker discovery for early cancer detection.</p>
@@ -230,6 +254,7 @@
       
 
     </main>
+    <br><br>
     <footer>
       <p>© 2025 Paws on the Keyboard</p>
       <p>Shu Wang</p>
