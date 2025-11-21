@@ -38,6 +38,7 @@ header {
 #first_page_quote{
   margin-top: 3rem;
   color: #F3f3EB;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 .navbar {
   display: flex;
