@@ -65,6 +65,10 @@ header {
   gap: 1.0rem;
 }
 
+#theme-toggle{
+  margin-right: 0.5rem;;
+}
+
 .header_page_quote{
   display: flex;
   justify-content: center;
