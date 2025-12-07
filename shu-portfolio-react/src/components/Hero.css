@@ -1,0 +1,86 @@
+.hero-container {
+  height: 100vh; 
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;     /* 垂直居中 */
+  background-color: #211d25; /* 和你 Navbar 一样的背景色 */
+  color: white;
+  text-align: center;
+  
+  /* 关键：因为 Navbar 是 fixed 的，这里不需要额外的 padding-top，
+     因为 flex 居中会自动把内容放在视觉中心，看起来不会被挡住。 */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  color: #CDBDD7; /* 用你那个浅紫色做点缀 */
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto; /* 居中段落 */
+  line-height: 1.6;
+}
+
+/* --- 按钮样式 --- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 50px; /* 圆角按钮看起来更现代 */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #CDBDD7; /* 浅紫色背景 */
+  color: #211d25;            /* 深色文字 */
+}
+
+.btn-primary:hover {
+  background-color: #ffffff; /* 悬停变白 */
+  transform: translateY(-2px); /* 微微上浮 */
+}
+
+.btn-outline {
+  border: 2px solid #CDBDD7;
+  color: #CDBDD7;
+}
+
+.btn-outline:hover {
+  background-color: #CDBDD7;
+  color: #211d25;
+}
+
+/* 小动画：挥手 */
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
