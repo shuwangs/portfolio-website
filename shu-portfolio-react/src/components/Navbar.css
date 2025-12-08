@@ -1,4 +1,4 @@
-/* --- Navbar 整体容器 --- */
+/* --- Navbar container --- */
 .navbar {
   position: fixed;    
   box-sizing: border-box;
@@ -34,4 +34,8 @@
   color: #FFF5F2;
   font-weight: 500;
   transition: color 0.3s ease;
+}
+.navbar-links a:hover {
+  color: #A8E6CF;
+  background-color: #2C333D;
 }

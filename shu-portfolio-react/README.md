@@ -1,16 +1,35 @@
-# React + Vite
+# 🐾 Shu - Developer Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built with React, Vite, and React Router.
+This site showcases selected projects, technical skills, and personal interests, including my cat-themed branding (“Paws on the Keyboard 🐾”).
 
-Currently, two official plugins are available:
+🚀 Live Demo: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📁 GitHub Repo: (this repo)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎨 Clean, responsive UI with custom styling
+- ⚛️ Built with React + Vite for fast, modern development
+- 🧭 Client-side routing using React Router
+- 🧩 Modular components (Hero, Navbar, Footer, Projects, About, etc.)
 
-## Expanding the ESLint configuration
+## 📂 Tech Stack
+| Category   | Technologies                   |
+| ---------- | ------------------------------ |
+| Frontend   | React, Vite, JSX, React Router |
+| Styling    | CSS Modules / Custom CSS       |
+| Deployment | Vercel               |
+| Tooling    | npm, GitHub                    |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🛠 Getting Started
+
+
+
+
+## 📬 Contact
+**Shu Wang**
+🌐 Portfolio: (URL)
+💼 LinkedIn: (link)
+📧 Email: (email)
