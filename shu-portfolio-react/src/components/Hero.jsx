@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
-import HeroImg from "../assets/hero_header_image.png";
+import HeroImg from "../assets/images/hero_header_image.png";
 
 function Hero() {
   return (
@@ -13,21 +13,27 @@ function Hero() {
       <div className="hero-content">
         <h1>Hi, I'm  <span className="author-name">Shu Wang</span></h1>
 
-        <h2>Full Stack Developer & Software Engineer & OMSCS Student@Georgia Tech</h2>
-        
-        <p className="hero-description">
-          Early-career software engineer focused on backend systems, full-stack development, and writing maintainable, well-structured code. 
-          <br />Currently coding with my cat, Bobo. 🐈
-        </p>
+        <h2>Full Stack Engineer & OMSCS Student @ Georgia Tech</h2>
 
+        <p className="hero-description">
+          Early-career software engineer passionate about building scalable backend systems and intuitive full-stack applications.
+          <br />
+          I write clean, maintainable code to solve real-world problems.
+          <br />
+          <span className="cat-note">Currently coding with my cat, Bobo. 🐈</span>
+        </p>
         <div className="hero-buttons">
-          <Link to="/projects" className="btn btn-primary">
+          <Link to="/projects" className="btn checkwork-btn">
             Check my Work
           </Link>
           
-          <Link to="/" className="btn btn-outline">
-            Meet Bobo
-          </Link>
+          <a href="/Resume_Shu_Wang.pdf" 
+            className="btn download-cv-btn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            download="Shu_Wang_Resume.pdf">
+            Download CV
+          </a>
         </div>
       </div>
     </section>

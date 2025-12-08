@@ -40,29 +40,22 @@
 }
 
 .btn {
+  background-color: #FFB7C5; 
+  color: #211d25;          
   padding: 12px 30px;
-  border-radius: 50px; /* 圆角按钮看起来更现代 */
+  border-radius: 50px; 
   text-decoration: none;
   font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 183, 197, 0.3);
   transition: all 0.3s ease;
 }
 
-.btn-primary {
-  background-color: #CDBDD7; /* 浅紫色背景 */
-  color: #211d25;            /* 深色文字 */
+.btn:hover {
+  background-color: #ffffff; 
+  transform: translateY(-2px); 
+  color:#FFB7C5
 }
 
-.btn-primary:hover {
-  background-color: #ffffff; /* 悬停变白 */
-  transform: translateY(-2px); /* 微微上浮 */
-}
 
-.btn-outline {
-  border: 2px solid #CDBDD7;
-  color: #CDBDD7;
-}
 
-.btn-outline:hover {
-  background-color: #CDBDD7;
-  color: #211d25;
-}
+

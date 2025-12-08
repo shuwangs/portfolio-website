@@ -10,7 +10,7 @@ function Home() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Skills Marquee (简单列举) */}
+      {/* 2. Skills Marquee */}
       <section className="skills-section">
         <h2>Tech Stack</h2>
         <div className="skills-list">

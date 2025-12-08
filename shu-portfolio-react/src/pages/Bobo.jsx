@@ -1,5 +1,5 @@
 import React from 'react';
-import boboImg from "../assets/bobo-in-bed.jpg";
+import boboImg from "../assets/images/bobo-in-bed.jpg";
 import "./Bobo.css";
 
 function Bobo() {
