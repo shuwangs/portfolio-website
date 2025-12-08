@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Hero from '../components/Hero';
-import "./Home.css"; // 记得创建这个 CSS 文件
+import "./Home.css";
 
 function Home() {
   return (

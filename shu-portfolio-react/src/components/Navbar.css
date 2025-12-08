@@ -6,7 +6,6 @@
   left: 0;
   width: 100%;
   height: 70px;
-  background-color: #211d25; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +14,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* --- (Logo + 按钮) --- */
+/* --- (Logo) --- */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -29,4 +28,10 @@
   align-items: center;
   gap: 20px;
   margin-right:2rem;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #FFF5F2;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }

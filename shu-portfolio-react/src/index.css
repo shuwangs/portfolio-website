@@ -1,7 +1,15 @@
+html,body {
+  background-color: #064232; 
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #FFF5F2;
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #064232;
     background-color: #ffffff;
   }
   a:hover {
