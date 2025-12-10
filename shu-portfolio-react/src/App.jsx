@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Bobo from "./pages/Bobo";
 import Blog from "./pages/Blog";
-
 function App() {
   return (
     <>
