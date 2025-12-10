@@ -9,7 +9,8 @@ function Projects() {
     <>
       <Navbar />
 
-      <section className="projects-section">
+      <section className="project-section">
+
         <h1>Projects</h1>
     
         <div className="projects-grid">
