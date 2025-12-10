@@ -1,7 +1,13 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 function Projects() {
-  return <h1>Projects is under construction</h1>
+  return(
+    <>
+    <Navbar />
+    </>
+  )
+  
 }
 
 export default Projects;
