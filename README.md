@@ -1,34 +1,35 @@
-# 🐾 Personal website - Paws on the keyboards
-A clean, responsive, cat-themed personal website built with HTML, CSS, JavaScript, and Bootstrap.
-This portfolio showcases my background, recent projects, blog, and contact information — wrapped in a playful design inspired by my cat Bobo 🐱.
+# 🐾 Shu - Developer Website
+
+A modern, responsive personal portfolio built with React, Vite, and React Router.
+This site showcases selected projects, technical skills, and personal interests, including my cat-themed branding (“Paws on the Keyboard 🐾”).
+
+🚀 Live Demo: 
+
+📁 GitHub Repo: (this repo)
 
 ## ✨ Features
-- 🎨 Responsive layout optimized for desktop & mobile
-- 📁 Projects section with modern Bootstrap cards
-- 🌐 Hosted on GitHub Pages for easy deployment & updates
 
-## Tools & Technologies
-- HTML5, CSS3, JavaScript
-- Bootstrap 5
-- Git & GitHub (deployment)
+- 🎨 Clean, responsive UI with custom styling
+- ⚛️ Built with React + Vite for fast, modern development
+- 🧭 Client-side routing using React Router
+- 🧩 Modular components (Hero, Navbar, Footer, Projects, About, etc.)
 
-## Deploy (GitHub Pages)
-
-The site is automatically deployed when changes are pushed to main.
-🔗(Live site:)[https://shuwangs.github.io/portfolio-website/]
-
-
-## Getting Started
-1. Clone the respository
-  ```bash
-  git clone https://github.com/shuwangs/portfolio-website.git
-  cd portfolio-website
-  ```
-2. Open index.html in your browser
+## 📂 Tech Stack
+| Category   | Technologies                   |
+| ---------- | ------------------------------ |
+| Frontend   | React, Vite, JSX, React Router |
+| Styling    | CSS Modules / Custom CSS       |
+| Deployment | Vercel               |
+| Tooling    | npm, GitHub                    |
 
 
-## 🐾 Author
-**Shu Wang**  
-📧 swang3130@gatech.edu  
-💼 [LinkedIn](https://www.linkedin.com/in/shuuwang/)   
-💻 [GitHub](https://github.com/shuwangs)
+## 🛠 Getting Started
+
+
+
+
+## 📬 Contact
+**Shu Wang**
+🌐 Portfolio: (URL)
+💼 LinkedIn: (link)
+📧 Email: (email)
