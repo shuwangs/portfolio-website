@@ -1,0 +1,21 @@
+html,body {
+  background-color: #1F242B; 
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #ffffff;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #064232;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

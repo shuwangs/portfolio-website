@@ -31,54 +31,78 @@
   </head>
 
   <body class="theme-dark">
-    <header class="full_page nav-fixed nav-visible" id="page-header" >
+    <header class="full_page nav-fixed nav-visible" id="page-header">
       
-    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #211d25;">
-      <div class="container-fluid nav_content">
-        <a title="Paws on the Keyboard" id="page_name">
-          <span>Paws on the Keyboard</span>
-        </a>
+      <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #211d25;">
+        <div class="container-fluid nav_content">
+          <a title="Paws on the Keyboard" id="page_name">
+            <span>Paws on the Keyboard</span>
+          </a>
 
-        <button id="theme-toggle" class="btn btn-outline-light ms-3">
-          <i class="bi bi-brightness-high-fill"></i>
-        </button>
-        
-        <button class="navbar-toggler" type="button" style="background-color: #CDBDD7;" 
-          data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" 
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button id="theme-toggle" class="btn btn-outline-light ms-3">
+            <i class="bi bi-brightness-high-fill"></i>
+          </button>
+          
+          <button class="navbar-toggler" type="button" style="background-color: #CDBDD7;" 
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- collapsible menu -->
-        <div class="collapse navbar-collapse " id="navbarNav" >
-          <div class="d-flex ms-auto gap-3 align-items-center" id="nav_items">
-            <form class="search_form d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-primary" type="submit">Search</button>
-            </form>
-            <!-- menu items -->
-            <a class="nav-link" href="#about_me">About</a>
-            <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="./blog.html">Blog</a>
-            <a class="nav-link" href="./bobo.html">Bobo</a>
-            <a class="nav-link" href="#contact_me">Contacts</a>
+          <!-- collapsible menu -->
+          <div class="collapse navbar-collapse " id="navbarNav" >
+            <div class="d-flex ms-auto gap-3 align-items-center" id="nav_items">
+              <form class="search_form d-flex" role="search" >
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-primary" type="button">Search</button>
+              </form>
+              <!-- menu items -->
+              <a class="nav-link" href="#about_me">About</a>
+              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="./blog.html">Blog</a>
+              <a class="nav-link" href="./bobo.html">Bobo</a>
+              <a class="nav-link" href="#contact_me">Contacts</a>
+            </div>
 
           </div>
+        </div>
 
+
+      </nav>
+
+        <div class="header_page container">
+          <div class="row">
+            <div class="hero_header_image-info col-md-6 col-sm">
+              <figure id="first-section-right" class="">
+                <!-- <div class="photo-container"> -->
+                  <img src="assets/img/hero_header_image.png" alt="Animiate Figure on the Hero Header Page">
+                <!-- </div> -->
+              </figure>
+            </div>
+
+            <div id="hero_page_right" class="col-md-6 col-sm">
+              <div class="me_name">
+                <h1>Hello I'm Shu Wang</h1>
+                <h3>Coder / Developer</h3>
+              </div>
+              <!-- LinkedIn -->
+              <div class="social-btn">
+                <a href="https://www.linkedin.com/in/shuuwang/" 
+                  target="_blank" class="d-block text-dark text-decoration-none">
+                    <i class="bi bi-linkedin" style="font-size: 2rem; color:#0a66c2;"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/shuwangs" 
+                  target="_blank" class="d-block text-dark text-decoration-none">
+                  <i class="bi bi-github" style="font-size: 2rem;"></i>
+                </a>
+              </div>
+            </div>
+          </div> 
         </div>
       </div>
-
-
-    </nav>
-
-    <div class="header_page_quote">
-      <p id="first_page_quote">
-        As long as you breathe,
-      <span class="second-line">there is an opportunity!</span>
-
-      </p>
-    </div>
     </header>
 
     <main>
@@ -110,23 +134,7 @@
               </a>
             </button>
             <button class="btn btn-info" id="contact_me_btn"><a href="#contact_me">Email Me</a></button>
-             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/shuuwang/" 
-                    target="_blank" class="d-block text-dark text-decoration-none">
-                    <i class="bi bi-linkedin" style="font-size: 2rem; color:#0a66c2;"></i>
-                </a>
-
-                <!-- GitHub -->
-                <a href="https://github.com/shuwangs" 
-                    target="_blank" class="d-block text-dark text-decoration-none">
-                    <i class="bi bi-github" style="font-size: 2rem;"></i>
-                </a>
-            </div>  
-
-          </div>
-
-          <div class="social-btn">
-
+          </div>  
         </div>
         
         <div class="container me_right">

@@ -22,22 +22,15 @@ h2 {
 }
 
 header {
-  background-image: url('../img/pawsonthekeyboard.png');
+  /* background-image: url('../img/hero_header_image.png'); */
   background-color: var(--bg-color);
   background-size: contain;
-  background-position: center;
+  background-position: left;
+  background-size: 50%;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   align-items: center;
-}
-
-#page_name {
-  font-size: 1.5rem;
-}
-#first_page_quote{
-  margin-top: 3rem;
-  color: #F3f3EB;
 }
 .navbar {
   display: flex;
@@ -64,19 +57,45 @@ header {
   gap: 1.0rem;
 }
 
-.header_page_quote{
+/* Header page format */
+.header_page img {
+  width: 70%;
+  margin: 10% 15%;
+}
+
+.header_page {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.hero_page_right {
+  display:flex;
+  flex-direction: row;
+  align-items: right;
   justify-content: center;
 }
-
-#first_page_quote {
-  font-size: 2rem;
-  white-space: pre-line;
+.hero_page_right .social-btn {
+  gap: 20px;
+}
+.me_right {
+  padding-top: 5rem;
+}
+#page_name {
+  font-size: 1.5rem;
 }
 
-.second-line {
-  padding-left: 80px; 
+.header_page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 2rem;
+  gap: 3rem;
 }
+
 
 main {
   background-color: var(--bg-color);
@@ -232,6 +251,7 @@ footer {
  padding-left: 20vw;
  border-top: 2px solid var(--line-color);
 }
+
 @media (max-width: 576px) {
   .about_me {
     flex-direction: column;
