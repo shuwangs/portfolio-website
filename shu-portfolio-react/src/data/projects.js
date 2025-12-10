@@ -13,7 +13,7 @@ export const projects = [
       "Timer, scoring, and game reset logic",
       "Clean UI built with HTML/CSS and vanilla JS",
     ],
-    image: '../assets/images/boggle_preview_small.jpg', 
+    image: '/image/boggle_preview_small.jpg', 
     imageAlt: "System architecture diagram of JobBuddy showing data flow from web to database."
   },
   {
@@ -29,7 +29,7 @@ export const projects = [
       "Android Activity lifecycle & UI components",
       "Persistent storage for saved job offers",
     ],
-    image: null, 
+    image: '/image/job-comparison.jpg', 
     imageAlt: "Job comparison app interface"
   },
   {
