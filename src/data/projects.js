@@ -5,7 +5,7 @@ export const projects = [
     title: "Boggle Word Game",
     description:"A browser-based word game featuring randomized board generation, DFS-based word validation, scoring logic, and a responsive UI. Built as part of Techtonica to practice algorithms and DOM manipulation.",
     tags: ["JavaScript", "HTML/CSS", "Game Logic"],
-    github: "https://github.com/yourusername/studycat",
+    github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/js-html-game",
     demo: "https://boggleplay.vercel.app",
     features: [
       "Randomized board generator for variable difficulty",
