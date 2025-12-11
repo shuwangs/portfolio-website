@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio built with React, Vite, and React Router.
 This site showcases selected projects, technical skills, and personal interests, including my cat-themed branding (“Paws on the Keyboard 🐾”).
 
-🚀 [Live Demo](shu-su-wang.vercel.app)
+🚀 [Live Demo](https://shu-su-wang.vercel.app/)
 
 📁 GitHub Repo: (this repo)
 
