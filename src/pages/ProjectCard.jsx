@@ -19,7 +19,7 @@ function ProjectCard({ project }) {
         ))}
 
       </div>
-
+      <br />
       <div className="project-actions">
         {project.demo && (
           <a

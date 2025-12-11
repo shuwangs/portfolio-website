@@ -51,7 +51,7 @@
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: white;
+  color: black;
   display: inline-block;
   margin: 0.25rem;
   transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
@@ -92,7 +92,7 @@
   padding: 8px 16px;
   border-radius: 999px;
 
-  background: #1e88ff;
+  background: #FFB7C5;
   color: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
@@ -105,11 +105,17 @@
 }
 
 .live-btn:hover {
-  background: #0f6fe0;
+  background: #b3dee2;
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(30, 136, 255, 0.35);
 }
 
 .live-btn .arrow {
   font-size: 0.9rem;
+}
+
+.bi-github{
+  font-size: 2rem;
+  color: #008080;
+  transition: color 0.3s ease;
 }
