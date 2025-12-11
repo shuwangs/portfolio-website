@@ -65,16 +65,16 @@
 
 
 .project-tag:nth-child(4n + 1) {
-  background: #61dbfb; /* React blue */
+  background: #b3dee2; /
 }
 .project-tag:nth-child(4n + 2) {
-  background: #f5820d; /* Firebase orange */
+  background: #efcfe3; 
 }
 .project-tag:nth-child(4n + 3) {
-  background: #7c5cff; /* purple */
+  background: #eaf2d7; 
 }
 .project-tag:nth-child(4n + 4) {
-  background: #2ea44f; /* green */
+  background: #ea9ab2; 
 }
 
 .project-actions {
