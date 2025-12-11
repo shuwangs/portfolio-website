@@ -19,7 +19,7 @@ This site showcases selected projects, technical skills, and personal interests,
 | ---------- | ------------------------------ |
 | Frontend   | React, Vite, JSX, React Router |
 | Styling    | CSS Modules / Custom CSS       |
-| Deployment | Vercel               |
+| Deployment | Vercel                         |
 | Tooling    | npm, GitHub                    |
 
 
@@ -30,6 +30,5 @@ This site showcases selected projects, technical skills, and personal interests,
 
 ## 📬 Contact
 **Shu Wang**
-🌐 Portfolio: (URL)
-💼 LinkedIn: (link)
-📧 Email: (email)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/shuuwang/)
+- 💌 swang3130@gatech.edu
