@@ -37,12 +37,13 @@ function About() {
           <div className="about-actions">
             <a
               className="btn btn-primary"
-              href="/assets/documents/Resume_Shu_Wang_202511.pdf"
-              download
+              href="https://github.com/shuwangs"
             >
-              Download CV
+              GitHub
             </a>
-
+            <a className="btn btn-primary" href="https://www.linkedin.com/in/shuuwang/">
+              Linkedin
+            </a>
             <a className="btn btn-secondary" href="mailto:your-email@example.com">
               Email Me
             </a>
