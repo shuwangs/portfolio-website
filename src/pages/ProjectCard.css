@@ -30,15 +30,86 @@
     color: #4b5563;
 }
 
-.project-tags {
-    padding: 1rem;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
 .project-links {
   padding: 0 2rem;
   font-size: 3rem;
   display: flex;
   justify-content: space-around;
   margin-bottom: 1.5rem;
+}
+
+.project-tags { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 1rem 1rem 1rem;
+}
+
+
+.project-tag {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  margin: 0.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.project-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.15) saturate(1.1);
+}
+
+
+.project-tag:nth-child(4n + 1) {
+  background: #61dbfb; /* React blue */
+}
+.project-tag:nth-child(4n + 2) {
+  background: #f5820d; /* Firebase orange */
+}
+.project-tag:nth-child(4n + 3) {
+  background: #7c5cff; /* purple */
+}
+.project-tag:nth-child(4n + 4) {
+  background: #2ea44f; /* green */
+}
+
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  background: #1e88ff;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.live-btn:hover {
+  background: #0f6fe0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(30, 136, 255, 0.35);
+}
+
+.live-btn .arrow {
+  font-size: 0.9rem;
 }

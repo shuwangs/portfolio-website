@@ -12,20 +12,35 @@ function ProjectCard({ project }) {
 
       <p className="project-description">{project.description}</p>
       <div className="project-tags">
+        {project.tags.map((tag) => (
+          <span key={tag} className="project-tag">
+            {tag}
+          </span>
+        ))}
 
-        <span key={project.id} className="project-tag"> {project.tags.join(' · ')} </span>
-  
       </div>
 
-      <div className="project-links">
-        {project.github && (
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-github"></i>
-            </a>
-        )}
+      <div className="project-actions">
         {project.demo && (
-          <a href={project.demo} target="_blank" rel="noopener noreferrer">
-            <img src = '/image/liveDemo.svg' alt="demo icon" className="demo-icon"/>
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-btn"
+          >
+            Live Link <span className="arrow">↗</span>
+          </a>
+        )}
+
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-btn"
+            aria-label="GitHub repository"
+          >
+            <i className="bi bi-github"></i>
           </a>
         )}
       </div>

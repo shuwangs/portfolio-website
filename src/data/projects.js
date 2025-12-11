@@ -36,7 +36,7 @@ export const projects = [
     id: 3,
     title: "Peachtree Savings Club (Database Systems Project)",
     description: "A full database-backed application developed for Georgia Tech CS6400. Designed MySQL schema, implemented SQL queries, built reports, and contributed to data modeling, EER diagrams, and backend query logic.",
-    tags: ["MySQL","ython","Flask", "Database Modeling",  "EER Diagrams"],
+    tags: ["MySQL","Python","Flask", "EER Diagrams"],
     github: null,
     demo: null, 
     features: [
