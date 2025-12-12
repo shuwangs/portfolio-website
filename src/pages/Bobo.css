@@ -1,3 +1,145 @@
-img{
-    width:400px;
+.bobo-page-container {
+  min-height: 100vh;
+  background-color: var(--hero-bg, #211d25); /* 使用全局变量 */
+  color: #ffffff;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.bobo-profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 183, 197, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  gap: 50px;
+  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.bobo-image-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bobo-photo {
+  width: 100%;
+  max-width: 350px; 
+  border-radius: 20px;
+
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px var(--accent-pink, #FFB7C5);
+  transform: rotate(-3deg); /* 稍微歪一点，显得调皮 */
+  transition: transform 0.3s ease;
+}
+
+.bobo-photo:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.status-badge {
+  position: absolute;
+  bottom: -10px;
+  background: #2ecc71;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.bobo-details {
+  flex: 1.5;
+  text-align: left;
+}
+
+.bobo-header {
+  margin-bottom: 20px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.bobo-title {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.highlight {
+  color: var(--accent-pink, #FFB7C5);
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* 稍微手写一点的字体 */
+}
+
+.bobo-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bobo-bio {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+/* --- Fun Facts 列表 --- */
+.section-label {
+  font-size: 1.2rem;
+  color: var(--accent-pink, #FFB7C5);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bobo-facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bobo-facts-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+.bobo-facts-list .icon {
+  color: var(--accent-pink, #FFB7C5);
+  margin-top: 4px;
+}
+
+/* --- BOTTOM BUTTONS --- */
+.bobo-actions {
+  text-align: center;
+}
+
+.bobo-actions p {
+  color: #b0b0b0;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
