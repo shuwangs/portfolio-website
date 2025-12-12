@@ -1,121 +1,146 @@
 .project-card{
-    background: white;
-    border-radius: 12px;
-    overflow: visible;
-    color: #1f2937;
+  color: var(--text-primary, #211d25);
+  background: white;
+  border-radius: 16px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 0 20px;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(255, 183, 197, 0.25);
+  border-color: var(--accent-pink, #FFB7C5);
 }
+
+.card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f3f4f6; 
+  border-bottom: 1px solid #eee;
+}
+
 .project-image {
   width: 100%;
-  height: 250px; 
+  height: 100%;
   object-fit: cover; 
-  border-radius: 12px;
-  border-bottom: 1px solid #f3f4f6;
+  transition: transform 0.5s ease;
 }
 
-.project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem;
-    text-align: center;
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
 }
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  border-bottom:  1px dashed #eee;
+
+}
+
+.title-icon {
+  color: var(--accent-pink, #FFB7C5);
+  font-size: 1rem;
+}
+
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+} 
+
+.tech-tag {
+  background-color: #f0f2f5;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.project-card:hover .tech-tag {
+  background-color: #fff;
+  border-color: var(--accent-pink, #FFB7C5);
+  color: #2c3e50;
+}
+
 .project-description {
-    font-size: 1rem;
-    margin: 0 1rem 1rem 1rem;
-    text-align: center;
-    color: #4b5563;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  flex-grow: 1; 
+  border-top:  1px dashed #eee;
+
+}
+
+.project-footer {
+  margin-top: auto; 
+  padding:  12px;
+  border-top: 1px dashed #eee;
 }
 
 .project-links {
-  padding: 0 2rem;
-  font-size: 3rem;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 1.5rem;
-}
-
-.project-tags { 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 1rem 1rem 1rem;
-}
-
-
-.project-tag {
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: black;
-  display: inline-block;
-  margin: 0.25rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-.project-tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
-  filter: brightness(1.15) saturate(1.1);
-}
-
-
-.project-tag:nth-child(4n + 1) {
-  background: #b3dee2; /
-}
-.project-tag:nth-child(4n + 2) {
-  background: #efcfe3; 
-}
-.project-tag:nth-child(4n + 3) {
-  background: #eaf2d7; 
-}
-.project-tag:nth-child(4n + 4) {
-  background: #ea9ab2; 
-}
-
-.project-actions {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 1rem 2rem;
+  justify-content: space-between;
 }
 
-.live-btn {
-  display: inline-flex;
+.btn-live {
+  background-color: var(--accent-pink, #FFB7C5);
+  color: #211d25;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
   align-items: center;
   gap: 6px;
-
-  padding: 8px 16px;
-  border-radius: 999px;
-
-  background: #FFB7C5;
-  color: #ffffff;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-
-  transition: 
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background-color 0.15s ease;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(255, 183, 197, 0.4);
 }
 
-.live-btn:hover {
-  background: #b3dee2;
+.btn-live:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(30, 136, 255, 0.35);
+  background-color: #211d25;
+  color: #fff;
 }
 
-.live-btn .arrow {
-  font-size: 0.9rem;
+.btn-disabled {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  cursor: default;
 }
 
-.bi-github{
-  font-size: 2rem;
-  color: #104911;
-  transition: color 0.3s ease;
+.icon-small {
+  font-size: 0.8em;
+}
+
+/* GitHub icon */
+.btn-github {
+  color: #2c3e50;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.btn-github:hover {
+  color: var(--accent-pink, #FFB7C5);
 }

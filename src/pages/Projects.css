@@ -1,16 +1,35 @@
-.project-section {
-    padding: 4rem 2rem;
-    margin: 4rem 4rem;
+.projects-page-container {
+  min-height: 100vh;
+  background-color: var(--hero-bg, #211d25);
+  padding-bottom: 80px;
 }
 
-.project-section h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color:#f3f4f6;
-    margin-bottom: 3rem;
+
+.project-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.section-header p {
+  color: #b0b0b0;
+  font-size: 1.2rem;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px; 
 }
