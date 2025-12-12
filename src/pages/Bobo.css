@@ -1,6 +1,6 @@
 .bobo-page-container {
   min-height: 100vh;
-  background-color: var(--hero-bg, #211d25); /* 使用全局变量 */
+  background-color: var(--hero-bg, #211d25); 
   color: #ffffff;
   padding: 80px 20px;
   display: flex;
@@ -142,4 +142,62 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--accent-pink, #FFB7C5);
+  color: #211d25;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--accent-pink, #FFB7C5);
+  color: var(--accent-pink, #FFB7C5);
+}
+
+.btn-outline:hover {
+  background: rgba(212, 245, 245, 0.6);
+  transform: translateY(-3px);
+}
+
+
+/* -- -Mobile Responsive --- */
+@media (max-width: 768px) {
+  .bobo-profile-card {
+    flex-direction: column; 
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .bobo-details {
+    text-align: center; 
+  }
+
+  .bobo-facts-list li {
+    justify-content: flex-start; 
+    text-align: left;
+  }
+  
+  .status-badge {
+    left: 50%;
+    transform: translateX(-50%); 
+  }
 }

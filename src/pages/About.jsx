@@ -45,7 +45,7 @@ function About() {
               </a>
             </div>
 
-              {/* Bobo Teaser (放在侧边栏显得像是个性化的小彩蛋) */}
+              {/* Bobo Teaser */}
             <div className="bobo-card">
               <h4>Coding Companion 🐾</h4>
               <p>Meet Bobo, the Chief Morale Officer.</p>
