@@ -7,7 +7,10 @@
   --text-light: #666;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --radius: 12px;
+  --accent-pink: #FFB7C5; 
+  --hero-bg: #211d25;
 }
+
 
 .about-container {
   background-color: var(--bg-color);
@@ -54,6 +57,7 @@
 }
 
 .intro-text h3 {
+  color: var(--hero-bg);
   margin: 10px 0;
   font-size: 1.5rem;
 }
