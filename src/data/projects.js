@@ -45,12 +45,29 @@ export const projects = [
       "Team-based development workflow",
       "Secure data handling and schema constraints",
     ],
-    image: "Peachtree saving club", // 假设你有一个图片导入
+    image: "Peachtree saving club", //
     imageAlt: "System architecture diagram of JobBuddy showing data flow from web to database."
   },
 
   {
     id: 4,
+    title: "Focus! Purr-grammer",
+    description: "A browser-based game built with React that gamifies focus and productivity. Players control a cat to catch ‘work’ items and avoid distractions, with levels increasing in difficulty.",
+    tags: ["React","JavaScript","CSS", "EER Diagrams"],
+    github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/focus_purr-grammer",
+    demo: null, 
+    features: [
+      "Real-time game loop implemented with React hooks and intervals",
+      "Falling items system with randomized spawn rate, speed, and position",
+      "Collision detection between player and falling items using bounding boxes",
+      "Config-driven item behavior using a centralized ITEM_CONFIG",
+    ],
+    image: "FocusPurrGrammerImage", 
+    imageAlt: "Screenshot of Focus! Purr-grammer showing a cat catching falling items in a game board."
+  },
+
+  {
+    id: 5,
     title: "StudyCat Extension 🐱",
     description: "A Chrome extension focused on productivity. It blocks distracting sites and replaces them with a focus timer and a virtual pet cat (Bobo) to encourage study habits.",
     tags: ["TypeScript", "Chrome Extension", "Manifest V3", "Local Storage"],
@@ -66,6 +83,24 @@ export const projects = [
     image: "StudyCatImage", 
     imageAlt: "Screenshot of StudyCat Chrome extension popup interface."
   },
+   {
+    id: 6,
+    title: "JobBuddy — Job Application Tracker",
+    description: "A full-stack web application that helps job seekers organize and track job applications. Users can paste job posting URLs, automatically parse job details, and manage application statuses through a clean dashboard.",
+    tags: ["Java", "Spring Boot", "REST API", "Spring Data JPA", "PostgreSQL", "Jsoup", "React"],
+    github: "https://github.com/shuwangs/JobBuddy",
+    demo: null, 
+    features: [
+      "Paste job posting URLs and automatically extract job details",
+      "RESTful backend built with Spring Boot and layered architecture",
+      "Job application lifecycle tracking (Applied, Interviewing, Offer, Rejected)",
+      "Relational database persistence using JPA and PostgreSQL",
+      "Clean separation of Controller, Service, Repository, and DTO layers",
+      // "Designed for deployment and future Google OAuth integration"
+    ],
+    image: "JobBuddyDashboard",
+    imageAlt: "Screenshot of JobBuddy web application showing job tracking dashboard"
+  }
 ];
 
 
