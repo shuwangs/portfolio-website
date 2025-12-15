@@ -51,7 +51,7 @@ export const projects = [
 
   {
     id: 4,
-    title: "Focus! Purr-grammer",
+    title: "Focus! Purr-grammer 🐱(In Progress)",
     description: "A browser-based game built with React that gamifies focus and productivity. Players control a cat to catch ‘work’ items and avoid distractions, with levels increasing in difficulty.",
     tags: ["React","JavaScript","CSS", "EER Diagrams"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/focus_purr-grammer",
@@ -68,7 +68,7 @@ export const projects = [
 
   {
     id: 5,
-    title: "StudyCat Extension 🐱",
+    title: "StudyCat Extension 🐱 (In Progress)",
     description: "A Chrome extension focused on productivity. It blocks distracting sites and replaces them with a focus timer and a virtual pet cat (Bobo) to encourage study habits.",
     tags: ["TypeScript", "Chrome Extension", "Manifest V3", "Local Storage"],
     github: "https://github.com/shuwangs/study_cat",
@@ -85,7 +85,7 @@ export const projects = [
   },
    {
     id: 6,
-    title: "JobBuddy — Job Application Tracker",
+    title: "JobBuddy — Job Application Tracker (In Progress)",
     description: "A full-stack web application that helps job seekers organize and track job applications. Users can paste job posting URLs, automatically parse job details, and manage application statuses through a clean dashboard.",
     tags: ["Java", "Spring Boot", "REST API", "Spring Data JPA", "PostgreSQL", "Jsoup", "React"],
     github: "https://github.com/shuwangs/JobBuddy",
