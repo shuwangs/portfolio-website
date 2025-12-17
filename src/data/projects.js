@@ -53,16 +53,16 @@ export const projects = [
     id: 4,
     title: "Focus! Purr-grammer 🐱(In Progress)",
     description: "A browser-based game built with React that gamifies focus and productivity. Players control a cat to catch ‘work’ items and avoid distractions, with levels increasing in difficulty.",
-    tags: ["React","JavaScript","CSS", "EER Diagrams"],
+    tags: ["React","JavaScript","CSS"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/focus_purr-grammer",
-    demo: null, 
+    demo: "https://focus-purr-grammer.vercel.app/", 
     features: [
       "Real-time game loop implemented with React hooks and intervals",
       "Falling items system with randomized spawn rate, speed, and position",
       "Collision detection between player and falling items using bounding boxes",
       "Config-driven item behavior using a centralized ITEM_CONFIG",
     ],
-    image: "FocusPurrGrammerImage", 
+    image: "/image/purr-grammer_screenshot.jpg", 
     imageAlt: "Screenshot of Focus! Purr-grammer showing a cat catching falling items in a game board."
   },
 
