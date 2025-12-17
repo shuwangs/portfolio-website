@@ -97,7 +97,7 @@ function About() {
                 <h3>Georgia Institute of Technology</h3>
                 <span className="highlight">M.S. Computer Science</span>
                 <span className="date"> 2024 – 2027 (Expected)</span>
-                <p>GPA: 3.66</p>
+                <p>GPA: 3.8</p>
               </div>
 
               <div className="edu-card">
