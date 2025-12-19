@@ -45,13 +45,13 @@ export const projects = [
       "Team-based development workflow",
       "Secure data handling and schema constraints",
     ],
-    image: "Peachtree saving club", //
+    image: "Peachtree saving club",
     imageAlt: "System architecture diagram of JobBuddy showing data flow from web to database."
   },
 
   {
     id: 4,
-    title: "Focus! Purr-grammer 🐱(In Progress)",
+    title: "Focus! Purr-grammer 🐈",
     description: "A browser-based game built with React that gamifies focus and productivity. Players control a cat to catch ‘work’ items and avoid distractions, with levels increasing in difficulty.",
     tags: ["React","JavaScript","CSS"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/focus_purr-grammer",
@@ -62,7 +62,7 @@ export const projects = [
       "Collision detection between player and falling items using bounding boxes",
       "Config-driven item behavior using a centralized ITEM_CONFIG",
     ],
-    image: "/image/purr-grammer_screenshot.jpg", 
+    image: "/image/purr-grammer.gif", 
     imageAlt: "Screenshot of Focus! Purr-grammer showing a cat catching falling items in a game board."
   },
 
