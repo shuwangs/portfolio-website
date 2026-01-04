@@ -34,18 +34,18 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Peachtree Savings Club",
+    title: "Peachtree Savings Club-Database Analytics",
     description: "A full database-backed application developed for Georgia Tech CS6400. Designed MySQL schema, implemented SQL queries, built reports, and contributed to data modeling, EER diagrams, and backend query logic.",
     tags: ["MySQL","Python","Flask", "EER Diagrams"],
-    github: null,
-    demo: null, 
+    github: "https://github.com/shuwangs/peachtree-savings-club-demo",
+    demo: "https://www.youtube.com/watch?v=K-tss6z30vo", 
     features: [
       "Normalized database schema designed with EER diagrams",
       "Complex SQL queries for multilayered reports",
       "Team-based development workflow",
       "Secure data handling and schema constraints",
     ],
-    image: "Peachtree saving club",
+    image: "/image/peachtree_savings_club.jpg",
     imageAlt: "System architecture diagram of JobBuddy showing data flow from web to database."
   },
 
@@ -91,7 +91,7 @@ export const projects = [
     github: "https://github.com/shuwangs/JobBuddy",
     demo: null, 
     features: [
-      "Paste job posting URLs and automatically extract job details",
+      "Chrome Extension automatically extract job details",
       "RESTful backend built with Spring Boot and layered architecture",
       "Job application lifecycle tracking (Applied, Interviewing, Offer, Rejected)",
       "Relational database persistence using JPA and PostgreSQL",
