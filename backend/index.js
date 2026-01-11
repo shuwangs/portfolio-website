@@ -31,6 +31,8 @@ app.get('/api/blogs', async (req, res) => {
 
           res.json(result.rows);
      } catch (err) {
+          console.error("GET /api/blogs error:", err);
+
           res.status(500).json({
                error: err.message}
           )
