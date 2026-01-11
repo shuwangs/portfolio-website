@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv'
-import {writeJson, readJson, validateId} from './utils/utils.js'
+// import {writeJson, readJson, validateId} from './utils/utils.js'
 import pool from './utils/db.js';
 
 dotenv.config({ path: './.env' })
@@ -10,7 +10,13 @@ const port = process.env.PORT || 5000
 const app = express();
 
 // middlewares
-app.use(cors())
+app.use(cors({
+ origin: [
+    "http://localhost:5173",
+    "https://https://shu-su-wang.vercel.app/"
+  ],
+}))
+
 app.use(express.json()); 
 
 // let blogsData = readJson('./blog.json');
