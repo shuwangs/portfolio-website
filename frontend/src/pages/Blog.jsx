@@ -1,12 +1,14 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './blog.css';
+
+
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
-
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
     // call backend for the blogs.
-    fetch('http://localhost:5001/api/blogs')
+    fetch(`${API_BASE}/api/blogs`)
       .then(res => res.json())
       .then(data => setBlogs(data))
       .catch(err => console.error("Fetch error:", err));
