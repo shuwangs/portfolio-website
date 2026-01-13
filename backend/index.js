@@ -6,6 +6,7 @@ import pool from './utils/db.js';
 
 dotenv.config({ path: './.env' })
 const port = process.env.PORT || 5000
+console.log(port);
 
 const app = express();
 
@@ -13,7 +14,7 @@ const app = express();
 app.use(cors({
  origin: [
     "http://localhost:5173",
-    "https://https://shu-su-wang.vercel.app/"
+    "https://shu-su-wang.vercel.app" 
   ],
 }))
 

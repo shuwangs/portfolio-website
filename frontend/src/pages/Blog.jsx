@@ -5,14 +5,18 @@ import './blog.css';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
-  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
-    // call backend for the blogs.
-    fetch(`${API_BASE}/api/blogs`)
-      .then(res => res.json())
-      .then(data => setBlogs(data))
-      .catch(err => console.error("Fetch error:", err));
-  }, []);
+      const API_BASE = import.meta.env.VITE_API_BASE_URL;
+      console.log(API_BASE);
+      // call backend for the blogs.
+      fetch(`${API_BASE}/api/blogs`)
+        .then(async (res) => {
+          await res.json()
+        })
+        .then(data => setBlogs(data))
+        .catch(err => console.error("Fetch error:", err.message));
+    }, []);
 
   return (
     <div className="blog-container">
