@@ -11,12 +11,12 @@ console.log(port);
 const app = express();
 
 // middlewares
-app.use(cors({
- origin: [
+const allowedOrigins = [
     "http://localhost:5173",
+    'http://localhost:3000',
     "https://shu-su-wang.vercel.app" 
-  ],
-}))
+  ]
+app.use(cors());
 
 app.use(express.json()); 
 
