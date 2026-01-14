@@ -16,7 +16,19 @@ const allowedOrigins = [
     'http://localhost:3000',
     "https://shu-su-wang.vercel.app" 
   ]
-app.use(cors());
+app.use(cors({
+     origin: function(origin, callback) {
+          if (allowedOrigins.indexOf(origin) !== -1) {
+               callback(null, true);
+          } else {
+               callback(new Error("Not allowed by CORS"));
+          }
+          
+     },
+     credentials: true,
+     methods: ['GET','POST', "PUT", 'DELETE'],
+
+}));
 
 app.use(express.json()); 
 
