@@ -4,15 +4,18 @@ import dotenv from 'dotenv'
 // import {writeJson, readJson, validateId} from './utils/utils.js'
 import * as sql_queries from "./utils/sql_queries.js";
 import pool from './utils/db.js';
+// dotenv.config({ path: './.env' })
 
-dotenv.config({ path: './.env' })
+
+dotenv.config( )
 const port = process.env.PORT || 5000
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
 ? process.env.ALLOWED_ORIGINS.split(',') : [];
 
 
 // console.log("ALLOWED_ORIGINS raw =", process.env.ALLOWED_ORIGINS);
-// console.log("allowedOrigins =", allowedOrigins);
+console.log("allowedOrigins =", allowedOrigins);
+
 
 console.log(port);
 
