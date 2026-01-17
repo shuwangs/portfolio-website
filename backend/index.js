@@ -4,10 +4,9 @@ import dotenv from 'dotenv'
 // import {writeJson, readJson, validateId} from './utils/utils.js'
 import * as sql_queries from "./utils/sql_queries.js";
 import pool from './utils/db.js';
-// dotenv.config({ path: './.env' })
 
+dotenv.config()
 
-dotenv.config( )
 const port = process.env.PORT || 5000
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
 ? process.env.ALLOWED_ORIGINS.split(',') : [];
@@ -41,7 +40,6 @@ app.use(cors({
 
 app.use(express.json()); 
 
-// let blogsData = readJson('./blog.json');
 // [READ] GET: fetch all the blogs
 app.get('/api/blogs', async (req, res) => {
      try {
@@ -140,28 +138,13 @@ app.put('/api/blogs/:id', async (req, res) => {
 
           // 1. update  categories table
           if (category) {
-               const catRes = await client.query(
-                    `INSERT INTO categories (name)
-                    VALUES ($1)
-                    ON CONFLICT (name) DO UPDATE SET name = EXCLUDED.name 
-                    RETURNING id`,
-                [category]
-               );
+               const catRes = await client.query(sql_queries.INSERT_INTO_CATEGORIES, [category]);
 
                categoryId = catRes.rows[0].id;
           }
 
           // 2. update posts table
-          const updatePostQuery = 
-               `UPDATE posts 
-                SET title = COALESCE($1, title), 
-                summary = COALESCE($2, summary), 
-                content = COALESCE($3, content), 
-                cover_image_url = COALESCE($4, cover_image_url),
-                category_id = COALESCE($5, category_id),
-                updated_at = CURRENT_TIMESTAMP
-                WHERE id = $6
-                RETURNING *`;
+          const updatePostQuery = sql_queries.UPDATE_POST;
           
                const postRes = await client.query(updatePostQuery, [
                     title, summary, content, cover_image_url, categoryId, reqIdx
@@ -176,28 +159,16 @@ app.put('/api/blogs/:id', async (req, res) => {
           if (tags && Array.isArray(tags)) {
 
                // delete previous tags 
-               await client.query(
-                    `DELETE 
-                     FROM tags_posts 
-                     WHERE post_id = $1`, 
-                    [reqIdx]
+               await client.query(sql_queries.DELETE_TAGS, [reqIdx]
                )
                
                // add new tags.
                for (const tagName of tags) {
-                const tagRes = await client.query(
-                    `INSERT INTO tags (name) 
-                     VALUES ($1) 
-                     ON CONFLICT (name) DO UPDATE SET name = EXCLUDED.name 
-                     RETURNING id`,
-                    [tagName]
+                const tagRes = await client.query(sql_queries.INSERT_INTO_TAGS, [tagName]
                 );
                 const tagId = tagRes.rows[0].id;
 
-                await client.query(
-                    `INSERT INTO tags_posts (tag_id, post_id) 
-                     VALUES ($1, $2) 
-                     ON CONFLICT DO NOTHING`,
+                await client.query(sql_queries.INSERT_INTO_TAGS_POSTS,
                     [tagId, reqIdx]
                 );
                }
@@ -222,13 +193,7 @@ app.delete('/api/blogs/:id', async (req, res) =>{
      if(!validateId(reqIdx, res)) return;
 
      try{
-          const result = await pool.query(
-               `DELETE 
-               FROM posts
-               WHERE id = $1 
-               RETURNING *`,
-               [reqIdx]
-          );
+          const result = await pool.query(sql_queries.DELETE_POSTS, [reqIdx]);
           
           if (result.rowCount !== 0) {
                res.json({
