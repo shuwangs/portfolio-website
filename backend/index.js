@@ -10,6 +10,10 @@ const port = process.env.PORT || 5000
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
 ? process.env.ALLOWED_ORIGINS.split(',') : [];
 
+
+// console.log("ALLOWED_ORIGINS raw =", process.env.ALLOWED_ORIGINS);
+// console.log("allowedOrigins =", allowedOrigins);
+
 console.log(port);
 
 const app = express();
@@ -17,6 +21,9 @@ const app = express();
 // middlewares
 app.use(cors({
      origin: (origin, callback) => {
+          console.log("Request Origin =", origin);
+          console.log("Allowed =", allowedOrigins);
+
           if (!origin || allowedOrigins.includes(origin)) {
                callback(null, true);
           } else {
