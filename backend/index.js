@@ -6,24 +6,22 @@ import pool from './utils/db.js';
 
 dotenv.config({ path: './.env' })
 const port = process.env.PORT || 5000
+const allowedOrigins = process.env.ALLOWED_ORIGINS 
+? process.env.ALLOWED_ORIGINS.split(',') : [];
+
 console.log(port);
 
 const app = express();
 
 // middlewares
-const allowedOrigins = [
-    "http://localhost:5173",
-    'http://localhost:3000',
-    "https://shu-su-wang.vercel.app" 
-  ]
 app.use(cors({
-     origin: function(origin, callback) {
-          if (allowedOrigins.indexOf(origin) !== -1) {
+     origin: (origin, callback) => {
+          if (!origin || allowedOrigins.includes(origin)) {
                callback(null, true);
           } else {
                callback(new Error("Not allowed by CORS"));
           }
-          
+
      },
      credentials: true,
      methods: ['GET','POST', "PUT", 'DELETE'],
