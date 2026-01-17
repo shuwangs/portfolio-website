@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv'
 // import {writeJson, readJson, validateId} from './utils/utils.js'
+import * as sql_queries from "./utils/sql_queries.js";
 import pool from './utils/db.js';
 
 dotenv.config({ path: './.env' })
@@ -34,22 +35,10 @@ app.use(express.json());
 // [READ] GET: fetch all the blogs
 app.get('/api/blogs', async (req, res) => {
      try {
-          const result = await pool.query(
-               `SELECT p.title, p.summary, p.created_at, 
-               cats.name AS category_name, 
-               ARRAY_AGG (tags.name) AS tags
-               FROM posts p
-               LEFT JOIN categories cats on p.category_id = cats.id
-               LEFT JOIN tags_posts tp on p.id = tp.post_id 
-               LEFT JOIN tags on tp.tag_id = tags.id
-               GROUP BY p.title, p.summary, p.created_at, category_name
-               ORDER BY p.created_at DESC`
-          );
-
+          const result = await pool.query(sql_queries.GET_ALL_BLOGS);
           res.json(result.rows);
      } catch (err) {
           console.error("GET /api/blogs error:", err);
-
           res.status(500).json({
                error: err.message}
           )
@@ -62,19 +51,7 @@ app.get('/api/blogs/:id', async (req, res) => {
      if(!validateId(reqId, res)) return;
      try {
           // const idx = blogsData.findIndex(blog => blog.id === reqId);
-          const result = await pool.query(
-               `SELECT p.title, p.summary, p.created_at, 
-               cats.name AS category_name, 
-               ARRAY_AGG (tags.name) AS tags
-               FROM posts p
-               LEFT JOIN categories cats on p.category_id = cats.id
-               LEFT JOIN tags_posts tp on p.id = tp.post_id 
-               LEFT JOIN tags on tp.tag_id = tags.id
-               WHERE p.id = $1
-               GROUP BY p.title, p.summary, p.created_at, category_name`,
-               [reqId]
-               
-          )
+          const result = await pool.query(sql_queries.GET_SINGLE_BLOG, [reqId])
           if (result.rows.length === 0) {
                res.status(404).json({
                     error: "BlogNotFound",
@@ -102,44 +79,23 @@ app.post('/api/blogs', async (req, res) => {
           await client.query('BEGIN');
 
           // add to categories table
-          const catRes = await client.query(
-               `INSERT INTO categories (name)
-               VALUES ($1) ON CONFLICT (name) 
-               DO UPDATE SET name = EXCLUDED.name 
-               RETURNING id`,
-               [category || 'uncategoried']
-          )
+          const catRes = await client.query(sql_queries.INSERT_INTO_CATEGORIES, [category || 'uncategoried'])
           const categoryId = catRes.rows[0].id;
 
           // add to posts table
-          const postRes = await client.query(
-               `INSERT INTO posts (title, summary, content, cover_image_url, created_at,  category_Id)
-               VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`,
+          const postRes = await client.query(sql_queries.POST_BLOG,
                [title, summary, content, cover_image_url, create_at, categoryId]
           )
-          const postId = postRes.rows[0].id;
+          const postId = postRes.rows[0].id
 
           // add to tags table
-
           for (const tagName of tags) {
-            const tagRes = await client.query(
-                `INSERT INTO tags(name)
-                VALUES ($1)
-                ON CONFLICT (name)
-                DO UPDATE SET name = EXCLUDED.name
-                RETURNING id`,
-                [tagName]
-            )
+            const tagRes = await client.query(sql_queries.INSERT_INTO_TAGS, [tagName])
             const tagId = tagRes.rows[0].id;
 
-            await client.query(
-                `INSERT INTO tags_posts(tag_id, post_id)
-                VALUES ($1, $2)
-                ON CONFLICT DO NOTHING`
-                ,
-                [tagId, postId]
-            )
-        }
+            await client.query(sql_queries.INSERT_INTO_TAGS_POSTS,[tagId, postId])
+          }
+
           await client.query('COMMIT');
 
           res.status(201).json({ 
