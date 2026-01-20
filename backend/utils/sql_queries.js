@@ -1,20 +1,20 @@
 export const GET_ALL_BLOGS = `
-    SELECT p.title, p.summary, p.created_at, cats.name AS category_name, ARRAY_AGG (tags.name) AS tags
+    SELECT p.id, p.slug, p.title, p.summary, p.created_at, cats.name AS category_name, ARRAY_AGG (tags.name) AS tags
     FROM posts p
     LEFT JOIN categories cats on p.category_id = cats.id
     LEFT JOIN tags_posts tp on p.id = tp.post_id 
     LEFT JOIN tags on tp.tag_id = tags.id
-    GROUP BY p.title, p.summary, p.created_at, category_name
+    GROUP BY p.id, p.slug, p.title, p.summary, p.created_at, category_name
     ORDER BY p.created_at DESC`
 
 export const GET_SINGLE_BLOG = `
-    SELECT p.title, p.summary, p.created_at, cats.name AS category_name, ARRAY_AGG (tags.name) AS tags
+    SELECT p.id, p.slug, p.title, p.summary, p.created_at, cats.name AS category_name, ARRAY_AGG (tags.name) AS tags
     FROM posts p
     LEFT JOIN categories cats on p.category_id = cats.id
     LEFT JOIN tags_posts tp on p.id = tp.post_id 
     LEFT JOIN tags on tp.tag_id = tags.id
     WHERE p.id = $1
-    GROUP BY p.title, p.summary, p.created_at, category_name`
+    GROUP BY p.id, p.slug, p.title, p.summary, p.created_at, category_name`
 
 
 export const INSERT_INTO_CATEGORIES = `
