@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv'
-// import {writeJson, readJson, validateId} from './utils/utils.js'
+import {writeJson, readJson, validateId} from './utils/utils.js'
 import * as sql_queries from "./utils/sql_queries.js";
 import pool from './utils/db.js';
 
