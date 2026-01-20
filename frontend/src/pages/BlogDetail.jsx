@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 const BlogDetail = () => {
-    const { blogId } = useParams();
+    const { id } = useParams();
     const [post, setPost] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -14,7 +14,7 @@ const BlogDetail = () => {
     useEffect(()=>{
         const loadPost = async () =>{
             try{
-                const url = `${API_BASE}/api/blogs/${blogId}`;
+                const url = `${API_BASE}/api/blogs/${id}`;
                 const res = await fetch(url);
                 if(!res.ok) {
                     throw new Error("Post is not found");
@@ -28,9 +28,11 @@ const BlogDetail = () => {
             }
 
         };
-        loadPost();
+        if (id) {
+            loadPost();
+        }
 
-    }, [slug]);
+    }, [id]);
 
     if(loading) return <p>Loading post...</p>
     if(error) return <p>Error: {error} <Link to ="/blog">Go back home</Link> </p>;
@@ -41,7 +43,7 @@ const BlogDetail = () => {
             <header>
                 <Link to='/blog'>← Back to Blog List</Link>
                 <h1>{post.title}</h1>
-                <p className="meta">Published on {new Date(post.createdAt).toLocaleDateString()}</p>
+                <p className="meta">Published on {new Date(post.created_at).toLocaleDateString()}</p>
 
             </header>
             <hr />
