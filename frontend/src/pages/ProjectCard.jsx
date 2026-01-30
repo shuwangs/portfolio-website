@@ -4,6 +4,7 @@ import { projects } from "../data/projects";
 import { FaGithub, FaExternalLinkAlt, FaFolderOpen } from "react-icons/fa";
 
 function ProjectCard({ project }) {
+  
   return (
     <div className="project-card">
 
@@ -47,7 +48,7 @@ function ProjectCard({ project }) {
               </a>
             ) : (
               // Placeholder
-              <span className="btn-disabled">Coming Soon</span>
+              <span className="btn-disabled"></span>
             )}
 
             {/* GitHub button */}

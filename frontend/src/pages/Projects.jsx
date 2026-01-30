@@ -2,9 +2,14 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import ProjectCard from './ProjectCard';
 import { projects } from "../data/projects";
+
 import './Projects.css';
 
 function Projects() {
+  const featuredProjects = projects
+  .filter(p => p.featured)
+  .sort((a, b) => (b.priority || 0) - (a.priority || 0));
+
   return(
     <>
       <Navbar />
@@ -16,7 +21,7 @@ function Projects() {
           </div>
 
           <div className="projects-grid">
-            {projects.map((project) => (
+            {featuredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
