@@ -3,6 +3,9 @@ export const projects = [
   {
     id: 1,
     title: "Boggle Word Game",
+    status: "completed",
+    priority: 10,
+    featured: true,
     description:"A browser-based word game featuring randomized board generation, DFS-based word validation, scoring logic, and a responsive UI. Built as part of Techtonica to practice algorithms and DOM manipulation.",
     tags: ["JavaScript", "HTML/CSS", "Game Logic"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/js-html-game",
@@ -19,6 +22,9 @@ export const projects = [
   {
     id: 2,
     title: "Job Comparison App",
+    status: "completed",
+    priority: 20,
+    featured: true,
     description:"An Android mobile app built in Java that allows users to save job offers and compare compensation factors such as salary, bonus, cost-of-living, and benefits. Includes object-oriented design, validation, and persistent storage.",
     tags: ["Java", "Android Studio", "OOP", "Mobile UI"],
     github: null,
@@ -35,6 +41,9 @@ export const projects = [
   {
     id: 3,
     title: "Peachtree Savings Club-Database Analytics",
+    status: "completed",
+    priority: 90,
+    featured: true,
     description: "A full database-backed application developed for Georgia Tech CS6400. Designed MySQL schema, implemented SQL queries, built reports, and contributed to data modeling, EER diagrams, and backend query logic.",
     tags: ["MySQL","Python","Flask", "EER Diagrams"],
     github: "https://github.com/shuwangs/peachtree-savings-club-demo",
@@ -52,6 +61,9 @@ export const projects = [
   {
     id: 4,
     title: "Focus! Purr-grammer 🐈",
+    status: "completed",
+    priority: 80,
+    featured: true,
     description: "A browser-based game built with React that gamifies focus and productivity. Players control a cat to catch ‘work’ items and avoid distractions, with levels increasing in difficulty.",
     tags: ["React","JavaScript","CSS"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/focus_purr-grammer",
@@ -65,10 +77,33 @@ export const projects = [
     image: "/image/purr-grammer.gif", 
     imageAlt: "Screenshot of Focus! Purr-grammer showing a cat catching falling items in a game board."
   },
-
   {
     id: 5,
+    title: "Full-Stack Weather App",
+    status: "completed",
+    priority: 95,
+    featured: true,
+    description:
+      "A full-stack weather application with a React frontend and a backend API for fetching and processing weather data. The project focuses on clean API design, state management, and performance optimization through caching. Built as part of Techtonica to practice full-stack development and system integration.",
+    tags: ["React", "JavaScript", "Node.js", "Express", "REST API", "Redis"],
+    github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/weather-app",
+    demo: null,
+    features: [
+      "Search-based weather lookup with dynamic UI updates",
+      "Backend REST API layer to handle external weather data requests",
+      "Redis caching to reduce redundant API calls and improve response time",
+      "Clear separation between frontend, backend, and caching layers",
+    ],
+    image: "/image/weather_app.gif",
+    imageAlt:
+      "Architecture and UI of the full-stack weather app with React frontend and backend API."
+  },
+  {
+    id: 6,
     title: "StudyCat Extension 🐱 (In Progress)",
+    status: "active",
+    priority: 65,
+    featured: true,
     description: "A Chrome extension focused on productivity. It blocks distracting sites and replaces them with a focus timer and a virtual pet cat (Bobo) to encourage study habits.",
     tags: ["TypeScript", "Chrome Extension", "Manifest V3", "Local Storage"],
     github: "https://github.com/shuwangs/study_cat",
@@ -80,12 +115,15 @@ export const projects = [
       "Chrome storage sync + background service worker",
       "Popup UI with interactive states",
     ],
-    image: "StudyCatImage", 
+    image: "/image/studycat.png", 
     imageAlt: "Screenshot of StudyCat Chrome extension popup interface."
   },
    {
-    id: 6,
+    id: 7,
     title: "JobBuddy — Job Application Tracker (In Progress)",
+    status: "active",
+    priority: 100,
+    featured: true,
     description: "A full-stack web application that helps job seekers organize and track job applications. Users can paste job posting URLs, automatically parse job details, and manage application statuses through a clean dashboard.",
     tags: ["Java", "Spring Boot", "REST API", "Spring Data JPA", "PostgreSQL", "Jsoup", "React"],
     github: "https://github.com/shuwangs/JobBuddy",
