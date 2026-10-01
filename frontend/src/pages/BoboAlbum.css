@@ -1,0 +1,36 @@
+.bobo-album { min-height: 80vh; padding: 112px 24px 80px; background: var(--page-bg); color: var(--ink); }
+.bobo-album-inner { max-width: 1080px; margin: 0 auto; }
+.bobo-album-back { display: inline-block; padding: 12px 0; color: var(--rose-deep); text-decoration: none; font-size: .9rem; font-weight: 600; }
+.bobo-album-back:hover { text-decoration: underline; text-underline-offset: 4px; }
+.bobo-album-header { margin: 32px 0 40px; }
+.bobo-album-header .bobo-album-eyebrow { color: var(--rose-deep); font-size: .73rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.bobo-album-header h1 { margin: 16px 0; font-size: clamp(2.3rem, 5vw, 3.7rem); line-height: 1.12; letter-spacing: -.045em; }
+.bobo-album-header p { color: var(--muted); line-height: 1.8; }
+.bobo-album-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.bobo-album-card { margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: var(--card-shadow); }
+.bobo-album-card > button { display: block; position: relative; width: 100%; padding: 0; border: 0; background: var(--rose-soft); cursor: zoom-in; }
+.bobo-album-card img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.bobo-album-enlarge { position: absolute; bottom: 12px; right: 12px; background: var(--surface); color: var(--ink); padding: 8px 10px; border-radius: 20px; font-size: .72rem; }
+.bobo-album-card figcaption { padding: 18px; }
+.bobo-album-card p { margin: 0; font-size: .95rem; line-height: 1.6; }
+.bobo-album time { display: block; margin-top: 8px; color: var(--muted); font-size: .78rem; }
+.bobo-album-empty { padding: 40px; background: var(--rose-soft); border-radius: 14px; }
+.bobo-lightbox { width: min(900px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--ink); }
+.bobo-lightbox::backdrop { background: #191922d9; }
+.bobo-lightbox-content { padding: 20px; }
+.bobo-lightbox-toolbar, .bobo-lightbox-navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.bobo-lightbox-toolbar { margin-bottom: 16px; color: var(--muted); font-size: .85rem; }
+.bobo-lightbox button { min-height: 44px; padding: 10px 16px; border: 1px solid var(--border); border-radius: var(--button-radius); background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; }
+.bobo-lightbox button:hover { background: var(--rose-soft); }
+.bobo-lightbox img { display: block; width: 100%; height: min(60dvh, 650px); object-fit: contain; border-radius: 8px; }
+.bobo-lightbox-caption { padding: 16px 0; line-height: 1.6; }
+.bobo-lightbox-caption p { margin: 0; }
+.bobo-album :is(a, button):focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
+.bobo-album-card > button:focus-visible { outline-offset: -4px; }
+@media (max-width: 700px) {
+  .bobo-album { padding: 96px 16px 56px; }
+  .bobo-album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .bobo-album-card figcaption { padding: 12px; }
+  .bobo-album-card p { font-size: .85rem; }
+  .bobo-lightbox-content { padding: 14px; }
+}

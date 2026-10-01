@@ -1,8 +1,7 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 import boboImg from "../assets/images/bobo-in-bed.jpg";
 import "./Bobo.css";
 import { FaPaw, FaCamera, FaVideo, FaHeart } from "react-icons/fa";
-// import introMd from "../data/bobo/intro.md";
 
 function Bobo() {
   return(
@@ -13,13 +12,14 @@ function Bobo() {
         {/* 左侧：Bobo 的“职业照” */}
         <div className="bobo-image-wrapper">
           <img src={boboImg} alt="Bobo the Chief Productivity Officer" className="bobo-photo" />
-          <div className="status-badge">🟢 Online (Sleeping)</div>
+          <div className="bobo-status">Online (Sleeping)</div>
         </div>
 
         {/* 右侧：详细介绍 */}
         <div className="bobo-details">
           <header className="bobo-header">
-            <h1 className="bobo-title">Meet <span className="highlight">Bobo</span> 🐾</h1>
+            <p className="bobo-eyebrow">Behind the scenes</p>
+            <h1 className="bobo-title">Meet <span>Bobo</span>.</h1>
             <h2 className="bobo-subtitle">Chief Productivity Officer (CPO)</h2>
           </header>
 
@@ -29,22 +29,22 @@ function Bobo() {
           </p>
 
           <div className="bobo-stats">
-            <h3 className="section-label"><FaHeart /> Skills & Fun Facts</h3>
+            <h3 className="bobo-section-label"><FaHeart aria-hidden="true" /> Skills & Fun Facts</h3>
             <ul className="bobo-facts-list">
               <li>
-                <span className="icon"><FaPaw /></span>
+                <span className="icon"><FaPaw aria-hidden="true" /></span>
                 <span>Expert at interrupting Zoom meetings with surprise walk-ins.</span>
               </li>
               <li>
-                <span className="icon"><FaPaw /></span>
+                <span className="icon"><FaPaw aria-hidden="true" /></span>
                 <span>Loves sleeping in cozy blankets and warm laptops.</span>
               </li>
               <li>
-                <span className="icon"><FaPaw /></span>
+                <span className="icon"><FaPaw aria-hidden="true" /></span>
                 <span>Provides moral support (purring) when tests fail.</span>
               </li>
               <li>
-                <span className="icon"><FaPaw /></span>
+                <span className="icon"><FaPaw aria-hidden="true" /></span>
                 <span>The true inspiration behind the <strong>StudyCat Extension</strong>.</span>
               </li>
             </ul>
@@ -55,12 +55,12 @@ function Bobo() {
       {/* 2. 底部功能区：相册入口 */}
       <div className='bobo-actions'>
         <p>Want to see more of my daily work?</p>
-        <div className="action-buttons">
-          <button className="btn btn-primary">
-            <FaCamera /> Check my Album
-          </button>
-          <button className="btn btn-outline">
-            <FaVideo /> See my Stories
+        <div className="bobo-action-buttons">
+          <Link to="/bobo/album" className="bobo-btn bobo-btn-primary">
+            <FaCamera aria-hidden="true" /> Check my Album
+          </Link>
+          <button className="bobo-btn bobo-btn-outline">
+            <FaVideo aria-hidden="true" /> See my Stories
           </button>
         </div>
       </div>
