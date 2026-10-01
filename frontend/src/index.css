@@ -1,22 +1,35 @@
-
-html,body {
-  background-color: #1F242B; 
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: #ffffff;
+:root {
+  --page-bg: #faf8f6;
+  --surface: #ffffff;
+  --ink: #252535;
+  --muted: #62616f;
+  --rose: #a85f78;
+  --rose-deep: #88465e;
+  --rose-soft: #f4e8ed;
+  --border: #e7dfe2;
+  --card-shadow: 0 4px 18px #25253505;
+  --button-radius: 9px;
 }
+html, body { background: var(--page-bg); margin: 0; font-family: system-ui, sans-serif; color: var(--ink); }
 
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #064232;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Shared actions across the introduction, experience, and project cards. */
+a:is(.hero-btn, .btn-live, .btn-github, .toolkit-resume) {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--button-radius);
+  font-size: .9rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
 }
+a:is(.hero-btn-primary, .btn-live, .toolkit-resume) { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+a:is(.hero-btn-primary, .btn-live, .toolkit-resume):hover { background: var(--rose-deep); border-color: var(--rose-deep); color: var(--surface); }
+a:is(.hero-btn-secondary, .btn-github) { background: var(--surface); color: var(--ink); }
+a:is(.hero-btn-secondary, .btn-github):hover { background: var(--rose-soft); border-color: var(--rose); color: var(--ink); text-decoration: none; }
+a:is(.hero-btn, .btn-live, .btn-github, .toolkit-resume):focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; }

@@ -2,7 +2,7 @@
 .navbar {
   position: fixed;    
   box-sizing: border-box;
-  background-color: #1F242B;
+  background-color: var(--page-bg);
   top: 0;
   left: 0;
   width: 100%;
@@ -12,7 +12,7 @@
   align-items: center;
   padding: 0 5rem;
   z-index: 1000; 
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-bottom: 1px solid var(--border);
 }
 
 /* --- (Logo) --- */
@@ -32,13 +32,13 @@
 }
 .navbar-links a {
   text-decoration: none;
-  color: #FFF5F2;
+  color: var(--ink);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 .navbar-links a:hover {
-  color: #FFB7C5;
-  background-color: #2C333D;
+  color: var(--rose-deep);
+  background-color: var(--rose-soft);
 }
 @media (max-width: 600px) {
   .navbar { padding: 0 16px; }
