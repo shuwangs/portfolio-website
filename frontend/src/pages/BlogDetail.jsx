@@ -1,57 +1,31 @@
-import {useEffect, useState} from 'react';
-import {useParams, Link} from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL;
+import { blogs, formatBlogDate } from '../data/blogs';
+import './blog.css';
 
 const BlogDetail = () => {
-    const { id } = useParams();
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+  const { slug } = useParams();
+  const post = blogs.find(blog => blog.slug === slug);
 
+  if (!post) return (
+    <section className="blog-post">
+      <h1>Post not found</h1>
+      <p>This article may have moved or is no longer available.</p>
+      <Link to="/blog">← Back to Blog List</Link>
+    </section>
+  );
 
-    useEffect(()=>{
-        const loadPost = async () =>{
-            try{
-                const url = `${API_BASE}/api/blogs/${id}`;
-                const res = await fetch(url);
-                if(!res.ok) {
-                    throw new Error("Post is not found");
-                }
-                const data = await res.json()
-                setPost(data);
-            } catch(err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
-            }
-
-        };
-        if (id) {
-            loadPost();
-        }
-
-    }, [id]);
-
-    if(loading) return <p>Loading post...</p>
-    if(error) return <p>Error: {error} <Link to ="/blog">Go back home</Link> </p>;
-    if(!post) return null;
-
-    return (
-        <article className='blog-post'>
-            <header>
-                <Link to='/blog'>← Back to Blog List</Link>
-                <h1>{post.title}</h1>
-                <p className="meta">Published on {new Date(post.created_at).toLocaleDateString()}</p>
-
-            </header>
-            <hr />
-            <div className="content">
-                <ReactMarkdown>{post.content}</ReactMarkdown>
-            </div>
-        </article>
-    )
-}
+  return (
+    <article className="blog-post">
+      <header>
+        <Link to="/blog">← Back to Blog List</Link>
+        <h1>{post.title}</h1>
+        <p className="meta">Published on <time dateTime={post.date}>{formatBlogDate(post.date)}</time></p>
+      </header>
+      <hr />
+      <div className="content"><ReactMarkdown>{post.content}</ReactMarkdown></div>
+    </article>
+  );
+};
 
 export default BlogDetail;

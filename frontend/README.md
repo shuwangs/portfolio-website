@@ -32,3 +32,28 @@ This site showcases selected projects, technical skills, and personal interests,
 **Shu Wang**
 - 🔗 [LinkedIn](https://www.linkedin.com/in/shuuwang/)
 - 💌 swang3130@gatech.edu
+
+## Blog publishing
+
+The blog reads `src/data/blogs/*.md` at build time; no API or database is needed.
+Create one Markdown file per post with YAML frontmatter:
+
+```markdown
+---
+title: "My new post"
+date: 2026-09-30
+tags: [JavaScript, Learning]
+description: "A short preview."
+---
+
+Your article goes here.
+```
+
+Posts appear newest first. The filename without `.md` becomes the URL slug
+(`/blogs/my-new-post`); optionally set `slug: my-stable-slug` in frontmatter.
+Use lowercase letters, numbers, and hyphens for slugs. `draft: true` hides a post
+from the list and article lookup (it is not a privacy boundary).
+Use `/images/example.png` for images placed in `public/images/`.
+Commit and redeploy to publish changes. Existing database ID URLs need an explicit
+mapping to redirect; they currently show the post-not-found page.
+The backend is retained for reference but is no longer used by the frontend blog.
