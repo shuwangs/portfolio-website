@@ -12,10 +12,71 @@ function About() {
       {/* 1) Hero */}
       <Hero />
 
-      {/* 2) About Me */}
-      <div className="content-wrapper">
-      
-        {/* Left Column: Profile & Intro */}
+      <section className="experience-section" id="experience" aria-labelledby="experience-title">
+        <header className="experience-intro">
+          <p className="experience-eyebrow">Experience</p>
+          <h2 id="experience-title">Where I build.</h2>
+          <p>Payments engineering, full-stack development, and a foundation in research.</p>
+        </header>
+        <div className="experience-layout">
+          <div className="experience-history">
+            <h3 className="experience-column-title"><FaBriefcase aria-hidden="true" /> Work Experience</h3>
+            <div className="work-timeline">
+              <article className="work-card work-card-current">
+                <div className="work-meta"><span>Apprenticeship</span><span>August 2026 – Present</span></div>
+                <h4>Sony Interactive Entertainment · PlayStation</h4>
+                <p className="work-role">Software Developer Apprentice — Payments</p>
+                <p className="work-location">Austin, TX</p>
+                <ul className="work-bullets">
+                  <li>Authored <strong>74 automated payment test scenarios</strong> for South Korea as part of a multi-country testing initiative, covering card, wallet, and local payment methods across purchase, refund, and entitlement flows.</li>
+                  <li>Investigate failing payment scenarios through API responses and transaction records, identifying issues with wallet funding, subscription eligibility, and payment-provider routing.</li>
+                  <li>Develop a feature-flagged proof of concept integrating the Payment Method Service with a data access library, implementing service branching, response mapping, and unit tests.</li>
+                  <li>Contribute to Java/Spring backend maintenance through dependency remediation and Jenkins integration-test troubleshooting.</li>
+                </ul>
+              </article>
+              <article className="work-card">
+                <div className="work-meta"><span>Training</span><span>2026</span></div>
+                <h4>Techtonica</h4>
+                <p className="work-role">Software Engineering Trainee</p>
+                <ul className="work-bullets">
+                  <li>Build full-stack applications using JavaScript, React, and backend APIs through a structured software engineering training program.</li>
+                  <li>Practice collaborative development through team projects, code reviews, debugging, and automated testing.</li>
+                  <li>Apply software engineering fundamentals through hands-on projects and a sponsored apprenticeship on PlayStation’s payments team.</li>
+                </ul>
+              </article>
+              <article className="work-card">
+                <div className="work-meta"><span>Research &amp; Data</span><span>Jul 2023 – Present</span></div>
+                <h4>Georgetown University</h4>
+                <p className="work-role">Data Analyst</p>
+                <ul className="work-bullets">
+                  <li>Automated workflows and improved data processing efficiency.</li>
+                  <li>Implemented reproducible and maintainable analytical pipelines.</li>
+                  <li>Collaborated on ML-based biomarker discovery projects.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <aside className="toolkit-panel" aria-labelledby="toolkit-title">
+            <p className="experience-eyebrow">Technical toolkit</p>
+            <h3 id="toolkit-title"><FaCode aria-hidden="true" /> Tech Stack</h3>
+            <p className="toolkit-description">Tools I use across payments engineering, training, and personal projects.</p>
+            {[
+              ['Languages', ['Java', 'JavaScript', 'TypeScript', 'Python', 'SQL']],
+              ['Backend & APIs', ['Spring Boot', 'Node.js', 'Express', 'REST APIs']],
+              ['Frontend', ['React', 'HTML', 'CSS']],
+              ['Data & Cloud', ['Oracle', 'PostgreSQL', 'Redis', 'AWS']],
+              ['Testing & Delivery', ['Automated testing', 'Unit testing', 'Jenkins', 'Git']],
+            ].map(([category, skills]) => (
+              <div className="toolkit-group" key={category}>
+                <h4>{category}</h4>
+                <div className="toolkit-tags">{skills.map(skill => <span key={skill}>{skill}</span>)}</div>
+              </div>
+            ))}
+            <a className="toolkit-resume" href="/Resume_Shu_Wang.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
+          </aside>
+        </div>
+      </section>
+      <div className="content-wrapper about-details">
         <aside className="about-sidebar">
           <div className="profile-card">
             <img
@@ -53,42 +114,7 @@ function About() {
             </div>
           </div>
         </aside>
-      
-        {/* Right Column: Experience & Details */}
-
-        <main className="about-main">
-          {/* Work Experience */}
-          <section className="info-block">
-            <h2 className="section-title"><FaBriefcase /> Work Experience</h2>
-            <div className="timeline">
-              <div className="timeline-item">
-                <div className="timeline-header">
-                  <h3>Data Analyst</h3>
-                  <span className="timeline-date">Jul 2023 – Present</span>
-                </div>
-                <h4 className="timeline-place">Georgetown University</h4>
-                <ul className="bullet-list">
-                  <li>Automated workflows and improved data processing efficiency.</li>
-                  <li>Implemented reproducible and maintainable analytical pipelines.</li>
-                  <li>Collaborated on ML-based biomarker discovery projects.</li>
-                </ul>
-              </div>
-         
-
-              <div className="timeline-item">
-                <div className="timeline-header">
-                  <h3>Software Engineer in Training</h3>
-                  <span className="timeline-date">Sep 2025 – Present</span>
-                </div>
-                <h4 className="timeline-place">Techtonica</h4>
-                <ul className="bullet-list">
-                  <li>Intensive training in JavaScript and React.</li>
-                  <li>Practice in collaborative development and code reviews.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
+        <div className="about-main">
           {/* Education */}
           <section className="info-block">
             <h2 className="section-title"><FaGraduationCap /> Education</h2>
@@ -106,21 +132,9 @@ function About() {
               </div>
             </div>
           </section>
-          {/* 3) Skills */}
-          <section className="info-block">
-            <h2 className="section-title"><FaCode /> Tech Stack</h2>
-            <div className="skills-container">
-              {['React', 'JavaScript', 'Java', 'Python', 'Git', 'SQL', 'Node.js'].map(skill => (
-                <span key={skill} className="skill-chip">{skill}</span>
-              ))}
-            </div>
-          </section>
-
-        </main>
-
+        </div>
       </div>
     </div>
-
   );
 }
 

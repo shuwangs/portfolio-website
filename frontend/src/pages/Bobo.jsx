@@ -1,4 +1,4 @@
-import React,  { useState, useEffect} from 'react';
+import React from 'react';
 import boboImg from "../assets/images/bobo-in-bed.jpg";
 import "./Bobo.css";
 import { FaPaw, FaCamera, FaVideo, FaHeart } from "react-icons/fa";

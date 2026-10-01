@@ -40,3 +40,9 @@
   color: #FFB7C5;
   background-color: #2C333D;
 }
+@media (max-width: 600px) {
+  .navbar { padding: 0 16px; }
+  .navbar-links { gap: 12px; margin-right: 0; }
+  .navbar-links a { font-size: .85rem; }
+  .navbar-logo { flex-shrink: 0; margin-right: 12px; }
+}
