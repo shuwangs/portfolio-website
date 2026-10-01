@@ -1,12 +1,14 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Hero from '../components/Hero';
-import shuImage from '../assets/images/shu-photo.jpg';
+import ProjectCard from './ProjectCard';
+import { projects } from '../data/projects';
 import "./About.css";
 
-import { FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap, FaBriefcase, FaCode } from "react-icons/fa";
+import { FaBriefcase, FaCode } from "react-icons/fa";
 
 function About() {
+  const featuredProjects = projects.filter(project => project.featured)
+    .sort((a, b) => b.priority - a.priority).slice(0, 3);
   return (
     <div className="about-container">
       {/* 1) Hero */}
@@ -76,64 +78,39 @@ function About() {
           </aside>
         </div>
       </section>
-      <div className="content-wrapper about-details">
-        <aside className="about-sidebar">
-          <div className="profile-card">
-            <img
-              className="about-photo"
-              src={shuImage}
-              alt="Photo: Shu Wang"
-            />
-            <div className="intro-text">
-              <h3>Hello, I'm Shu! 👋</h3>
-              <p className="bio-summary">
-                <strong>Bioinformatician</strong> turned <strong>Software Developer</strong>.
-              </p>
-              <p className="bio-details">
-                I fell in love with coding while analyzing complex data. Now bridging logic and creativity at <strong>Georgia Tech</strong>.
-              </p>
-            </div>
-
-            <div className="social-links">
-              <a href="https://github.com/shuwangs" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <FaGithub />
-              </a>
-              <a href="https://www.linkedin.com/in/shuuwang/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <FaLinkedin />
-              </a>
-              <a href="mailto:shuw425@gmail.com" aria-label="Email">
-                <FaEnvelope />
-              </a>
-            </div>
-
-              {/* Bobo Teaser */}
-            <div className="bobo-card">
-              <h4>Coding Companion 🐾</h4>
-              <p>Meet Bobo, the Chief Morale Officer.</p>
-              <Link to="/bobo" className="btn-small">Meet Bobo →</Link>
-            </div>
+      <section className="home-projects" aria-labelledby="home-projects-title">
+        <header className="home-section-header">
+          <div>
+            <p className="experience-eyebrow">Selected work</p>
+            <h2 id="home-projects-title">Featured Projects</h2>
           </div>
-        </aside>
-        <div className="about-main">
-          {/* Education */}
-          <section className="info-block">
-            <h2 className="section-title"><FaGraduationCap /> Education</h2>
-            <div className="cards-grid">
-              <div className="edu-card">
-                <h3>Georgia Institute of Technology</h3>
-                <span className="highlight">M.S. Computer Science</span>
-                <span className="date"> 2024 – 2027 (Expected)</span>
-                <p>GPA: 3.8</p>
-              </div>
-
-              <div className="edu-card">
-                <h3>Zhejiang University, CN</h3>
-                <span className="highlight">Ph.D. Plant Pathology</span>
-              </div>
-            </div>
-          </section>
+          <Link className="home-projects-link" to="/projects">View all projects →</Link>
+        </header>
+        <div className="home-projects-grid">
+          {featuredProjects.map(project => (
+            <ProjectCard key={project.id} project={project} headingLevel="h3" />
+          ))}
         </div>
-      </div>
+      </section>
+
+      <section className="education-section" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <ul className="education-list">
+          <li>
+            <div>
+              <h3>Georgia Institute of Technology</h3>
+              <p>M.S. Computer Science</p>
+            </div>
+            <p className="education-date">2024 – 2027 (Expected)</p>
+          </li>
+          <li>
+            <div>
+              <h3>Zhejiang University, CN</h3>
+              <p>Ph.D. Plant Pathology</p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

@@ -19,7 +19,7 @@ export const projects = [
     id: 9,
     title: "PawPal+",
     priority: 130,
-    featured: true,
+    featured: false,
     description: "An AI-assisted pet-care planner that turns natural-language requests into structured daily schedules. Python rules validate tasks, check conflicts, and verify the revised plan.",
     tags: ["Python", "Streamlit", "Structured AI Output", "pytest"],
     github: "https://github.com/shuwangs/PetCare-Asistant",
@@ -195,5 +195,4 @@ export const projects = [
     imageAlt: "Screenshot of JobBuddy web application showing job tracking dashboard"
   }
 ];
-
 
