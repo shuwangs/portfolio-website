@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import boboImg from "../assets/images/bobo-in-bed.jpg";
 import "./Bobo.css";
 import { FaPaw, FaCamera, FaVideo, FaHeart } from "react-icons/fa";
 
 function Bobo() {
+  const [showStories, setShowStories] = useState(false);
   return(
     <div className="bobo-page-container">
     {/* 1. 顶部主要介绍卡片 */}
@@ -59,10 +61,20 @@ function Bobo() {
           <Link to="/bobo/album" className="bobo-btn bobo-btn-primary">
             <FaCamera aria-hidden="true" /> Check my Album
           </Link>
-          <button className="bobo-btn bobo-btn-outline">
+          <button
+            type="button"
+            className="bobo-btn bobo-btn-outline"
+            aria-expanded={showStories}
+            aria-controls="bobo-stories"
+            onClick={() => setShowStories(visible => !visible)}
+          >
             <FaVideo aria-hidden="true" /> See my Stories
           </button>
         </div>
+        <section id="bobo-stories" className="bobo-stories" hidden={!showStories} aria-labelledby="bobo-stories-title">
+          <h2 id="bobo-stories-title">My stories are coming to Tails &amp; Tales.</h2>
+          <p>My human is still getting it ready. I’m supervising, mostly with my eyes closed. 💤</p>
+        </section>
       </div>
 
     </div>
