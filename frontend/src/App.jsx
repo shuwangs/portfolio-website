@@ -8,6 +8,7 @@ import Bobo from "./pages/Bobo";
 import BoboAlbum from "./pages/BoboAlbum";
 import Blog from "./pages/Blog";
 import BlogDetail from './pages/BlogDetail';
+import Me from './pages/Me';
 function App() {
   return (
     <>
@@ -17,9 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path='/blogs/:slug' element={<BlogDetail />} /> 
+          <Route path='/blogs/:slug' element={<BlogDetail />} />
           <Route path="/bobo" element={<Bobo />} />
           <Route path="/bobo/album" element={<BoboAlbum />} />
+          <Route path="/me" element={<Me />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </main>
