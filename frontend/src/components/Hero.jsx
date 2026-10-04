@@ -14,7 +14,7 @@ function Hero() {
         <div className="hero-buttons">
           <Link to="/projects" className="hero-btn hero-btn-primary">Projects <span aria-hidden="true">↗</span></Link>
           <a href="#experience" className="hero-btn hero-btn-secondary">Experience <span aria-hidden="true">↓</span></a>
-          <a href="/Resume_Shu_Wang.pdf" className="hero-btn hero-btn-secondary" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
+          <a href="/Resume_SW.pdf" className="hero-btn hero-btn-secondary" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
         </div>
         <p className="cat-note">Currently coding with my cat, Bobo 🐈</p>
       </div>

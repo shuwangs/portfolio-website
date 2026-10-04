@@ -74,7 +74,7 @@ function About() {
                 <div className="toolkit-tags">{skills.map(skill => <span key={skill}>{skill}</span>)}</div>
               </div>
             ))}
-            <a className="toolkit-resume" href="/Resume_Shu_Wang.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
+            <a className="toolkit-resume" href="/Resume_SW.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
           </aside>
         </div>
       </section>
