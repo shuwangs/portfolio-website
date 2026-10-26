@@ -51,9 +51,11 @@ function About() {
                 <h4>Georgetown University</h4>
                 <p className="work-role">Data Analyst</p>
                 <ul className="work-bullets">
-                  <li>Automated workflows and improved data processing efficiency.</li>
-                  <li>Implemented reproducible and maintainable analytical pipelines.</li>
-                  <li>Collaborated on ML-based biomarker discovery projects.</li>
+                  <li>Independently conducted end-to-end computational data analysis across multiple biomedical research projects using R, from raw data preprocessing and quality control to feature selection, predictive modeling, and result interpretation.</li>
+                  <li>Developed reproducible analytical workflows to clean, transform, and analyze multi-omics datasets, including lipidomic, metabolomic, and proteomic measurements.</li>
+                  <li>Applied statistical analysis and machine learning techniques to identify candidate biomarkers, comparing predictive models such as LogitBoost and linear regression using cross-validation and performance metrics, including accuracy and F1-score.</li>
+                  <li>Identified a 12-analyte biomarker panel comprising 5 lipids, 2 metabolites, and 5 proteins from 194 clinical samples for early-stage pancreatic cancer detection.</li>
+                  <li>Contributed to research presented in an AACR 2024 conference abstract, which reported an AUC greater than 0.95 for the biomarker panel.</li>
                 </ul>
               </article>
             </div>

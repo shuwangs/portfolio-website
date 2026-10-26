@@ -32,10 +32,15 @@ export const projects = [
     title: "Tails & Tales",
     priority: 120,
     featured: true,
-    description: "A pet diary with semantic search, AI title suggestions, and translation. Find relevant entries by meaning using embeddings and cosine similarity.",
-    tags: ["React", "Express", "PostgreSQL", "pgvector", "Embeddings"],
+    description: "A full-stack pet diary with AI title suggestions, translation, and semantic search. Browse memories by date or meaning, with calendar filters that work alongside search results.",
+    tags: ["React", "Tailwind CSS", "Express", "PostgreSQL", "pgvector", "MiniLM"],
     github: "https://github.com/shuwangs/tails_tales",
-    features: ["Generates embeddings for new diary entries", "Ranks entries by similarity to a search query", "Includes component tests and CI configuration"],
+    features: [
+      "Ranks diary entries using MiniLM embeddings and cosine similarity",
+      "Combines calendar date filters with semantic search in a responsive layout",
+      "Supports inline editing with cancel controls and draft preservation when saving fails",
+      "Regenerates embeddings on the server after edits and supports backfilling existing entries"
+    ],
     image: "/image/tails-tales.jpg",
     imageAlt: "Tails and Tales pet diary application walkthrough"
   },
