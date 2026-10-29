@@ -114,3 +114,24 @@
   .home-projects, .education-section { padding: 40px 20px; }
   .education-list li { flex-direction: column; gap: 8px; }
 }
+
+/* Unified portfolio layout. */
+
+.about-container { background: transparent; }
+.home-projects, .education-section, .experience-section { max-width: 1008px; padding: 42px 24px; }
+.home-section-header { padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+.home-section-header h2, .experience-intro h2 { font-size: 1.8rem; letter-spacing: -.04em; }
+.home-projects-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.home-projects-link { font-size: .82rem; text-decoration: none; }
+.experience-intro { padding-bottom: 22px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+.experience-layout { grid-template-columns: minmax(0, 1fr) 250px; gap: 32px; }
+.work-timeline { border-left: 1px solid var(--border); padding-left: 24px; }
+.work-card { padding: 0 0 28px; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+.work-card::before { left: -31px; top: 3px; width: 8px; height: 8px; }
+.work-card h4 { font-size: 1.1rem; }
+.work-bullets { border: 0; padding-top: 0; margin-top: 16px; font-size: .87rem; }
+.toolkit-panel { padding: 22px; background: #ffffffa6; }
+.toolkit-panel h3 { font-size: 1.15rem; }
+.toolkit-tags span { padding: 4px 8px; font-size: .72rem; background: transparent; }
+@media (max-width: 800px) { .experience-layout { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) { .home-projects, .education-section, .experience-section { padding: 32px 20px; } }

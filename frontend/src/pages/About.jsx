@@ -13,6 +13,21 @@ function About() {
     <div className="about-container">
       {/* 1) Hero */}
       <Hero />
+      <section className="home-projects" aria-labelledby="home-projects-title">
+        <header className="home-section-header">
+          <div>
+            <p className="experience-eyebrow">Selected work</p>
+            <h2 id="home-projects-title">Featured Projects</h2>
+          </div>
+          <Link className="home-projects-link" to="/projects">View all projects →</Link>
+        </header>
+        <div className="home-projects-grid">
+          {featuredProjects.map(project => (
+            <ProjectCard key={project.id} project={project} headingLevel="h3" />
+          ))}
+        </div>
+      </section>
+
 
       <section className="experience-section" id="experience" aria-labelledby="experience-title">
         <header className="experience-intro">
@@ -78,20 +93,6 @@ function About() {
             ))}
             <a className="toolkit-resume" href="/Resume_SW.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
           </aside>
-        </div>
-      </section>
-      <section className="home-projects" aria-labelledby="home-projects-title">
-        <header className="home-section-header">
-          <div>
-            <p className="experience-eyebrow">Selected work</p>
-            <h2 id="home-projects-title">Featured Projects</h2>
-          </div>
-          <Link className="home-projects-link" to="/projects">View all projects →</Link>
-        </header>
-        <div className="home-projects-grid">
-          {featuredProjects.map(project => (
-            <ProjectCard key={project.id} project={project} headingLevel="h3" />
-          ))}
         </div>
       </section>
 

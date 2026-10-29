@@ -24,15 +24,15 @@ function ProjectCard({ project, headingLevel = 'h2' }) {
       <div className="card-content">
         {project.status === 'active' && <span className="project-status">In progress</span>}
         <Heading className="project-title">{project.title}</Heading>
-        <div className="project-tags">
-          {project.tags.map(tag => <span key={tag} className="tech-tag">{tag}</span>)}
-        </div>
         <p className="project-description">{project.description}</p>
         {project.featured && project.features?.length > 0 && (
           <ul className="project-highlights">
             {project.features.map(feature => <li key={feature}>{feature}</li>)}
           </ul>
         )}
+        <div className="project-tags">
+          {project.tags.map(tag => <span key={tag} className="tech-tag">{tag}</span>)}
+        </div>
         {project.note && <p className="project-note">{project.note}</p>}
         {(project.demo || project.github) && (
           <div className="project-footer">

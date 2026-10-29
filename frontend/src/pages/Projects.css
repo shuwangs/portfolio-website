@@ -9,3 +9,57 @@
 .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .more-projects { margin-top: 80px; }
 @media (max-width: 700px) { .projects-grid { grid-template-columns: minmax(0, 1fr); } .project-section { padding: 0 18px; } }
+
+/* Unified portfolio layout. */
+
+.projects-page-container { background: transparent; padding: 64px 24px 80px; }
+.project-section { max-width: 960px; padding: 0; }
+.section-header { text-align: left; margin-bottom: 32px; }
+.section-header h1 { font-size: clamp(2.4rem, 5vw, 3.3rem); letter-spacing: -.045em; }
+.section-header p { margin-left: 0; }
+.projects-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.more-projects { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border); }
+@media (max-width: 600px) { .projects-page-container { padding: 44px 20px 60px; } .project-section { padding: 0; } }
+
+.other-projects-list { list-style: none; padding: 0; margin: 0; }
+.other-projects-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 24px 0; border-top: 1px solid var(--border); }
+.other-projects-list h3 { font-size: 1.1rem; margin: 0 0 10px; letter-spacing: -.02em; }
+.other-projects-list p { color: var(--muted); font-size: .9rem; line-height: 1.7; margin: 0 0 10px; }
+.other-project-stack { font-size: .75rem; color: var(--muted); }
+.other-projects-list a { flex-shrink: 0; color: var(--rose-deep); font-size: .8rem; padding: 10px 0; text-decoration: none; }
+.learning-section { margin-top: 48px; border-top: 1px solid var(--border); padding-top: 28px; }
+.learning-section > .section-eyebrow { font-size: .65rem; color: var(--rose-deep); text-transform: uppercase; letter-spacing: .14em; font-weight: 650; }
+.learning-section h2 { font-size: 1.2rem; letter-spacing: -.025em; margin: 12px 0; }
+.learning-section > p:not(.section-eyebrow) { font-size: .85rem; color: var(--muted); line-height: 1.8; max-width: 600px; }
+.learning-archive { margin-top: 16px; }
+.learning-archive summary { width: fit-content; cursor: pointer; color: var(--rose-deep); font-size: .8rem; padding: 10px 0; }
+.learning-archive summary span { margin-left: 8px; }
+.learning-archive ul { list-style: none; padding: 0; margin: 12px 0 0; }
+.learning-archive li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid var(--border); font-size: .8rem; line-height: 1.7; }
+.learning-archive a { color: var(--muted); text-decoration: none; }
+.learning-stack { color: var(--muted); font-size: .72rem; flex-shrink: 0; }
+.other-projects-list a:hover, .learning-archive a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.other-projects-list a:focus-visible, .learning-archive :is(a,summary):focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
+@media (max-width: 600px) { .other-projects-list li { gap: 16px; } .learning-archive li { flex-direction: column; gap: 3px; } }
+
+.learning-archive .other-projects-list li { padding: 24px 0; font-size: .9rem; }
+.learning-archive .other-projects-list a { flex-shrink: 0; color: var(--rose-deep); }
+
+.tools-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border); }
+.tools-section .section-header { margin-bottom: 24px; }
+.tools-section .section-header h2 { font-size: 1.7rem; }
+.tool-entry { display: flex; align-items: baseline; justify-content: space-between; gap: 32px; }
+.tool-entry h3 { margin: 0 0 10px; font-size: 1.15rem; letter-spacing: -.025em; }
+.tool-entry p { max-width: 680px; margin: 0 0 12px; color: var(--muted); font-size: .9rem; line-height: 1.8; }
+.tool-entry > a { flex-shrink: 0; padding: 10px 0; color: var(--rose-deep); font-size: .8rem; text-decoration: none; }
+.tool-entry > a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.tool-entry > a:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
+@media (max-width: 600px) { .tool-entry { flex-direction: column; gap: 10px; } }
+
+.tool-entry { display: grid; grid-template-columns: 36% minmax(0, 1fr) auto; align-items: start; gap: 24px; }
+.tool-screenshot { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; }
+@media (max-width: 600px) { .tool-entry { grid-template-columns: minmax(0, 1fr); gap: 18px; } }
+
+.tool-entry { grid-template-columns: 36% minmax(0, 1fr); }
+.tool-links { margin-top: 18px; }
+@media (max-width: 600px) { .tool-entry { grid-template-columns: minmax(0, 1fr); } }

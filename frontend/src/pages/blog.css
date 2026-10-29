@@ -154,3 +154,10 @@
     grid-column: span 6;
   }
 }
+
+/* Unified portfolio layout. */
+
+.blog-container { background: transparent; padding-top: 64px; }
+.blog-container > h1, .page-title { max-width: 960px; text-align: left; }
+.blog-container > h1::after, .page-title::after { margin-left: 0; }
+.blog-grid { max-width: 960px; }

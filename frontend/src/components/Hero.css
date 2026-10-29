@@ -37,3 +37,24 @@
 }
 
 .hero-affiliations strong { color: var(--rose-deep); font-weight: 600; }
+
+/* Unified portfolio layout. */
+
+.hero-container { padding: 72px 24px 48px; background: transparent; }
+.hero-content { max-width: 960px; text-align: left; }
+.hero-content h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); }
+.hero-eyebrow { margin-bottom: 22px; }
+.hero-affiliations { font-size: 1.1rem; }
+.hero-description { max-width: 690px; margin: 0 0 28px; font-size: 1rem; }
+.hero-buttons { justify-content: flex-start; }
+@media (max-width: 600px) { .hero-container { padding: 48px 20px 32px; } .hero-eyebrow, .hero-affiliations { margin-left: 0; } .hero-greeting { display: inline; font-size: 1em; } .hero-affiliations { max-width: none; font-size: .95rem; } }
+
+/* A personal introduction alongside Shu and Bobo's photograph. */
+.hero-content { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: center; gap: 48px; }
+.hero-introduction { min-width: 0; }
+.hero-content h1 { font-size: clamp(2.6rem, 4.6vw, 3.8rem); }
+.hero-portrait { margin: 0; transform: rotate(2deg); padding: 10px 10px 0; background: #ffffffc9; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 12px 32px #233a5010; }
+.hero-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 9px; }
+.hero-portrait figcaption { padding: 14px 4px; color: var(--muted); font-size: .73rem; text-align: center; line-height: 1.6; }
+@media (max-width: 800px) { .hero-content { grid-template-columns: minmax(0, 1fr) 230px; gap: 28px; } .hero-content h1 { font-size: 2.8rem; } }
+@media (max-width: 600px) { .hero-content { grid-template-columns: minmax(0, 1fr); gap: 32px; } .hero-portrait { width: min(100%, 300px); justify-self: center; transform: none; } }

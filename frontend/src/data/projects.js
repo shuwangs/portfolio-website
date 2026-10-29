@@ -46,15 +46,21 @@ export const projects = [
   },
   {
     id: 11,
-    title: "Paw-tector",
+    title: "PurrNanny",
+    status: "active",
     priority: 110,
     featured: true,
-    description: "A community animal-sighting tracker for volunteers. Organizes animal profiles, health observations, and sighting histories in a relational database.",
-    tags: ["React", "Node.js", "Express", "PostgreSQL", "Vitest"],
-    github: "https://github.com/shuwangs/paw-tector",
-    features: ["Links animal records with a sighting timeline", "Search filters with paginated results", "Frontend API and form component tests"],
-    image: "/image/paw-tector.jpg",
-    imageAlt: "Paw-tector animal profiles and sighting records walkthrough"
+    description: "A shared cat-care assistant that turns household observations into structured records, care summaries, and a factual timeline for veterinary visits.",
+    tags: ["Python", "MCP", "SQLite"],
+    github: "https://github.com/shuwangs/purr-nanny",
+    features: [
+      "Natural-language chat calls authenticated MCP tools to record and retrieve care observations",
+      "Follow-up answers update the original observation without creating duplicate records",
+      "Shared household records and evidence-based summaries retain source observations"
+    ],
+    note: "Local prototype; cloud deployment and live Alexa+ integration are not yet verified.",
+    image: "/image/purrnanny.png",
+    imageAlt: "PurrNanny cat-care chat interface showing a shared daily care record with sample data"
   },
 
   {

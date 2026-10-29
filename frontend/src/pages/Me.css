@@ -105,3 +105,8 @@
     border-radius: 16px;
   }
 }
+
+/* Unified portfolio layout. */
+
+.me-page { padding-top: 64px; }
+@media (max-width: 600px) { .me-page { padding-top: 44px; } }

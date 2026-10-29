@@ -111,3 +111,7 @@
 }
 .bobo-stories h2 { margin: 0 0 12px; font-size: 1.2rem; line-height: 1.5; color: var(--ink); }
 .bobo-stories p { margin: 0; line-height: 1.8; }
+
+.bobo-page-container { padding-top: 64px; background: transparent; }
+.bobo-profile-card { max-width: 960px; background: #ffffffb8; gap: 40px; }
+@media (max-width: 600px) { .bobo-page-container { padding-top: 44px; } }

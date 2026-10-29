@@ -110,3 +110,14 @@
     transition: none;
   }
 }
+
+/* Unified portfolio layout. */
+
+.navbar { position: relative; height: 90px; padding: 0 24px; background: transparent; border: 0; backdrop-filter: none; }
+.navbar-inner { max-width: 960px; padding: 0; border-bottom: 1px solid var(--border); }
+.navbar-links { gap: 28px; }
+.navbar-link { position: relative; padding: 0; min-height: 64px; border-radius: 0; }
+.navbar-link.is-active, .navbar-link:hover { color: var(--ink); background: transparent; }
+.navbar-link.is-active::after { content: ''; position: absolute; bottom: 8px; inset-inline: 0; height: 2px; background: var(--rose); }
+@media (max-width: 600px) { .navbar { height: 78px; padding: 0 20px; } .navbar-inner { padding: 0; gap: 16px; } .navbar-links { gap: 15px; } .navbar-link { padding: 0; font-size: .76rem; } }
+@media (max-width: 360px) { .navbar-links { gap: 10px; } }

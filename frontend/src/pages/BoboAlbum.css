@@ -34,3 +34,6 @@
   .bobo-album-card p { font-size: .85rem; }
   .bobo-lightbox-content { padding: 14px; }
 }
+
+.bobo-album { padding-top: 48px; background: transparent; }
+.bobo-album-inner { max-width: 960px; }

@@ -5,6 +5,7 @@ function Hero() {
   return (
     <section className="hero-container" aria-labelledby="hero-title">
       <div className="hero-content">
+        <div className="hero-introduction">
         <p className="hero-eyebrow">Software development · Payments · Full-stack applications</p>
         <h1 id="hero-title"><span className="hero-greeting">Hi, I’m</span> <span className="author-name">Shu Wang</span></h1>
         <p className="hero-affiliations"><strong>PlayStation Payments</strong> <span aria-hidden="true">·</span> Georgia Tech MSCS</p>
@@ -17,6 +18,11 @@ function Hero() {
           <a href="/Resume_SW.pdf" className="hero-btn hero-btn-secondary" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
         </div>
         <p className="cat-note">Currently coding with my cat, Bobo 🐈</p>
+        </div>
+        <figure className="hero-portrait">
+          <img src="/image/bobo-and-me.jpeg" alt="Shu with her cat, Bobo" width="600" height="750" />
+          <figcaption>Me &amp; Bobo, my everyday coding companion.</figcaption>
+        </figure>
       </div>
     </section>
   );
