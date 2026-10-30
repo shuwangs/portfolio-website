@@ -39,7 +39,8 @@ export const projects = [
       "Ranks diary entries using MiniLM embeddings and cosine similarity",
       "Combines calendar date filters with semantic search in a responsive layout",
       "Supports inline editing with cancel controls and draft preservation when saving fails",
-      "Regenerates embeddings on the server after edits and supports backfilling existing entries"
+      "Regenerates embeddings on the server after edits and supports backfilling existing entries",
+      "Benchmarks retrieval with JavaScript and Python on 51 synthetic entries and 40 answerable queries, achieving 95% Recall@6 versus 87.5% for TF-IDF"
     ],
     image: "/image/tails-tales.jpg",
     imageAlt: "Tails and Tales pet diary application walkthrough"
@@ -69,7 +70,7 @@ export const projects = [
     status: "completed",
     priority: 10,
     featured: false,
-    description:"A browser-based word game featuring randomized board generation, DFS-based word validation, scoring logic, and a responsive UI. Built as part of Techtonica to practice algorithms and DOM manipulation.",
+    description: "A browser-based word game featuring randomized board generation, DFS-based word validation, scoring logic, and a responsive UI. Built as part of Techtonica to practice algorithms and DOM manipulation.",
     tags: ["JavaScript", "HTML/CSS", "Game Logic"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/js-html-game",
     demo: "https://boggleplay.vercel.app",
@@ -79,7 +80,7 @@ export const projects = [
       "Timer, scoring, and game reset logic",
       "Clean UI built with HTML/CSS and vanilla JS",
     ],
-    image: '/image/boggle_preview_small.jpg', 
+    image: '/image/boggle_preview_small.jpg',
     imageAlt: "Boggle word game board"
   },
   {
@@ -88,17 +89,17 @@ export const projects = [
     status: "completed",
     priority: 20,
     featured: false,
-    description:"An Android mobile app built in Java that allows users to save job offers and compare compensation factors such as salary, bonus, cost-of-living, and benefits. Includes object-oriented design, validation, and persistent storage.",
+    description: "An Android mobile app built in Java that allows users to save job offers and compare compensation factors such as salary, bonus, cost-of-living, and benefits. Includes object-oriented design, validation, and persistent storage.",
     tags: ["Java", "Android Studio", "OOP", "Mobile UI"],
     github: null,
-    demo: null, 
+    demo: null,
     features: [
       "Add & edit job offers with validation",
       "Weighted scoring algorithm for comparing jobs",
       "Android Activity lifecycle & UI components",
       "Persistent storage for saved job offers",
     ],
-    image: '/image/job-comparison.jpg', 
+    image: '/image/job-comparison.jpg',
     imageAlt: "Job comparison app interface"
   },
   {
@@ -108,7 +109,7 @@ export const projects = [
     priority: 90,
     featured: false,
     description: "A full database-backed application developed for Georgia Tech CS6400. Designed MySQL schema, implemented SQL queries, built reports, and contributed to data modeling, EER diagrams, and backend query logic.",
-    tags: ["MySQL","Python","Flask", "EER Diagrams"],
+    tags: ["MySQL", "Python", "Flask", "EER Diagrams"],
     github: "https://github.com/shuwangs/peachtree-savings-club-demo",
     demo: "https://www.youtube.com/watch?v=K-tss6z30vo",
     demoLabel: "Watch Demo",
@@ -129,16 +130,16 @@ export const projects = [
     priority: 80,
     featured: false,
     description: "A browser-based game built with React that gamifies focus and productivity. Players control a cat to catch ‘work’ items and avoid distractions, with levels increasing in difficulty.",
-    tags: ["React","JavaScript","CSS"],
+    tags: ["React", "JavaScript", "CSS"],
     github: "https://github.com/shuwangs/techtonica-assignments/tree/main/projects/focus_purr-grammer",
-    demo: "https://focus-purr-grammer.vercel.app/", 
+    demo: "https://focus-purr-grammer.vercel.app/",
     features: [
       "Real-time game loop implemented with React hooks and intervals",
       "Falling items system with randomized spawn rate, speed, and position",
       "Collision detection between player and falling items using bounding boxes",
       "Config-driven item behavior using a centralized ITEM_CONFIG",
     ],
-    image: "/image/purr-grammer.gif", 
+    image: "/image/purr-grammer.gif",
     imageAlt: "Screenshot of Focus! Purr-grammer showing a cat catching falling items in a game board."
   },
   {
@@ -171,7 +172,7 @@ export const projects = [
     description: "A Chrome extension focused on productivity. It blocks distracting sites and replaces them with a focus timer and a virtual pet cat (Bobo) to encourage study habits.",
     tags: ["TypeScript", "Chrome Extension", "Manifest V3", "Local Storage"],
     github: "https://github.com/shuwangs/study_cat",
-    demo: null, 
+    demo: null,
     features: [
       "Real-time focus timer with reward system",
       "Bobo the cat mascot with dynamic moods",
@@ -179,10 +180,10 @@ export const projects = [
       "Chrome storage sync + background service worker",
       "Popup UI with interactive states",
     ],
-    image: "/image/studycat.png", 
+    image: "/image/studycat.png",
     imageAlt: "Screenshot of StudyCat Chrome extension popup interface."
   },
-   {
+  {
     id: 7,
     title: "JobBuddy — Job Application Tracker",
     status: "active",
@@ -191,7 +192,7 @@ export const projects = [
     description: "A full-stack web application that helps job seekers organize and track job applications. Users can paste job posting URLs, automatically parse job details, and manage application statuses through a clean dashboard.",
     tags: ["Java", "Spring Boot", "REST API", "Spring Data JPA", "PostgreSQL", "Jsoup", "React"],
     github: "https://github.com/shuwangs/JobBuddy",
-    demo: null, 
+    demo: null,
     features: [
       "Chrome Extension automatically extract job details",
       "RESTful backend built with Spring Boot and layered architecture",
