@@ -4,6 +4,16 @@ const files = import.meta.glob('./blogs/*.md', {
   query: '?raw', import: 'default', eager: true,
 });
 
+// Import Markdown-adjacent images so Vite serves and bundles their URLs.
+const images = import.meta.glob('./blogs/posts_images/*.{png,jpg,jpeg,gif,svg,webp}', {
+  query: '?url', import: 'default', eager: true,
+});
+
+export function resolveBlogImage(src) {
+  const relativePath = src.replace(/^\.\//, '');
+  return images[`./blogs/${relativePath}`] || src;
+}
+
 export const blogs = Object.entries(files).map(([path, source]) => {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
   if (!match) throw new Error(`Missing blog metadata: ${path}`);

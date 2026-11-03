@@ -34,19 +34,21 @@ For TailTales, this fits the interaction I wanted: users describe a memory in na
 ### TF-IDF: A Lexical Baseline
 One approach to ranked retrieval is Term Frequency–Inverse Document Frequency, or TF-IDF.
 TF-IDF weights words using two signals:
-- Term frequency: how often a word appears in a document.
 
-![alt text](posts_images/TF.png)
-- Inverse document frequency: how uncommon that word is across the collection.
-  
-![alt text](posts_images/IDF.png)
+- **Term frequency:** how often a word appears in a document.
+
+![Term frequency formula](posts_images/TF.png)
+
+- **Inverse document frequency:** how uncommon a word is across the collection.
+
+![Inverse document frequency formula](posts_images/IDF.png)
 
 For example, in TailTales, the word "pet" might appear in almost every diary entry, making it less useful for distinguishing relevant records. In contrast, a term such as "vomiting" might appear in only a small number of entries, making it more informative when searching for a pet's health history.
 
 
 - The TF-IDF score is the product of TF and IDF:
 
-![alt text](posts_images/TF-IDF.png)
+![TF-IDF score](posts_images/TF-IDF.png)
 
 In short, TF-IDF balances local term frequency with global term rarity, helping identify words that distinguish one document from others.
 
@@ -127,12 +129,7 @@ I used a small offline dataset containing:
 
 Recall measures the fraction of relevant entries retrieved in the top K results:
 
-$$
-\operatorname{Recall@K}
-=
-\frac{\text{Relevant entries in the top K}}
-{\text{Total relevant entries}}
-$$
+**Recall@K = Relevant entries in the top K / Total relevant entries**
 
 If a query has two relevant entries and both appear in the top six, Recall@6 is 1. If only one appears, it is 0.5.
 
@@ -140,44 +137,30 @@ For TailTales, recall reflects whether a user can find the memory within the ret
 
 ### Precision@K: How Many Results Are Relevant?
 
+
 Precision measures the proportion of the top K results that are relevant:
 
-$$
-\operatorname{Precision@K}
-=
-\frac{\text{Relevant entries in the top K}}{K}
-$$
+**Precision@K = Relevant entries in the top K / K**
 
-If only one entry is relevant and the system returns six, Precision@6 is at most $1/6$, or approximately 0.167.
+If only one entry is relevant and the system returns six, Precision@6 is at most 1/6, or approximately 0.167.
 
 This is common in the TailTales dataset, where most queries target one specific memory. Precision therefore needs to be interpreted alongside the number of relevant entries and the fixed result count.
 
 ### MRR@K: How High Is the First Relevant Result?
 
-Mean Reciprocal Rank measures how highly the first relevant result is ranked, averaged across queries:
+Mean Reciprocal Rank measures how highly the first relevant result is ranked, averaged across queries.
 
-$$
-\operatorname{MRR@K}
-=
-\frac{1}{N}
-\sum_{i=1}^{N}
-\operatorname{RR@K}(i)
-$$
+For each query:
 
-where:
+- If a relevant entry appears within the top K, its reciprocal rank is **1 / rank of the first relevant entry**.
+- If no relevant entry appears within the top K, its reciprocal rank is **0**.
 
-$$
-\operatorname{RR@K}(i)
-=
-\begin{cases}
-\frac{1}{r_i}, & \text{if a relevant result appears within the top K} \\
-0, & \text{otherwise}
-\end{cases}
-$$
+The overall score is:
 
-Here, $N$ is the number of evaluated queries, and $r_i$ is the rank of the first relevant result for query $i$.
+**MRR@K = Sum of reciprocal ranks / Number of evaluated queries**
 
-A relevant entry at rank one contributes 1; at rank two, 0.5; and at rank six, approximately 0.167. If no relevant entry appears in the top K, the query contributes zero.
+A relevant entry at rank one contributes 1; at rank two, 0.5; and at rank six, approximately 0.167.
+
 
 This captures an important part of the experience: finding a memory immediately is better than finding it after scanning the entire list.
 

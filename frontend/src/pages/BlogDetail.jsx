@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
-import { blogs, formatBlogDate } from '../data/blogs';
+import ReactMarkdown, { defaultUrlTransform } from 'react-markdown';
+import { blogs, formatBlogDate, resolveBlogImage } from '../data/blogs';
 import './blog.css';
 
 const BlogDetail = () => {
@@ -23,7 +23,12 @@ const BlogDetail = () => {
         <p className="meta">Published on <time dateTime={post.date}>{formatBlogDate(post.date)}</time></p>
       </header>
       <hr />
-      <div className="content"><ReactMarkdown>{post.content}</ReactMarkdown></div>
+      <div className="content"><ReactMarkdown urlTransform={(url, key, node) => {
+        const safeUrl = defaultUrlTransform(url);
+        return node.tagName === 'img' && key === 'src'
+          ? resolveBlogImage(safeUrl)
+          : safeUrl;
+      }}>{post.content}</ReactMarkdown></div>
     </article>
   );
 };
