@@ -45,10 +45,27 @@ function About() {
                 <p className="work-role">Software Developer Apprentice — Payments</p>
                 <p className="work-location">Austin, TX</p>
                 <ul className="work-bullets">
-                  <li>Authored <strong>74 automated payment test scenarios</strong> for South Korea as part of a multi-country testing initiative, covering card, wallet, and local payment methods across purchase, refund, and entitlement flows.</li>
-                  <li>Investigate failing payment scenarios through API responses and transaction records, identifying issues with wallet funding, subscription eligibility, and payment-provider routing.</li>
-                  <li>Develop a feature-flagged proof of concept integrating the Payment Method Service with a data access library, implementing service branching, response mapping, and unit tests.</li>
-                  <li>Contribute to Java/Spring backend maintenance through dependency remediation and Jenkins integration-test troubleshooting.</li>
+                  <li>
+                    Upgraded a payment data access library to <strong>Java 21</strong>,
+                    resolved compatibility issues, and validated integration with a consuming
+                    payment service.
+                  </li>
+                  <li>
+                    Remediated <strong>119 dependency vulnerabilities</strong> in a payment
+                    event-handling service, reducing reported vulnerabilities to zero on the
+                    main branch.
+                  </li>
+                  <li>
+                    Migrated a payment library from legacy Jenkins infrastructure to
+                    <strong> Unified CI</strong>, establishing Java 21 snapshot and release
+                    pipelines and resolving SonarQube code quality findings.
+                  </li>
+
+                  <li>
+                    Authored <strong>74 automated payment test scenarios</strong> supporting
+                    PlayStation’s multi-tenant commerce platform expansion to South Korea,
+                    and investigated failures using API responses and transaction records.
+                  </li>
                 </ul>
               </article>
               <article className="work-card">

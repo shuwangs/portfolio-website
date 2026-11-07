@@ -36,11 +36,11 @@ export const projects = [
     tags: ["React", "Tailwind CSS", "Express", "PostgreSQL", "pgvector", "MiniLM"],
     github: "https://github.com/shuwangs/tails_tales",
     features: [
-      "Ranks diary entries using MiniLM embeddings and cosine similarity",
-      "Combines calendar date filters with semantic search in a responsive layout",
-      "Supports inline editing with cancel controls and draft preservation when saving fails",
-      "Regenerates embeddings on the server after edits and supports backfilling existing entries",
-      "Benchmarks retrieval with JavaScript and Python on 51 synthetic entries and 40 answerable queries, achieving 95% Recall@6 versus 87.5% for TF-IDF"
+      "Built a responsive React interface combining calendar filters with semantic search results",
+      "Implemented inline editing with cancel controls and draft preservation when saving fails",
+      "Integrated AI-assisted title suggestions and translation into the diary workflow",
+      "Implemented semantic retrieval using MiniLM embeddings and pgvector, with server-side embedding updates after edits",
+      "Evaluated retrieval on 51 synthetic entries and 40 answerable queries, achieving 95% Recall@6 versus 87.5% for a TF-IDF baseline"
     ],
     image: "/image/tails-tales.jpg",
     imageAlt: "Tails and Tales pet diary application walkthrough"
