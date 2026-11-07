@@ -1,6 +1,22 @@
 
 export const projects = [
   {
+    id: 12,
+    title: "KnightShift",
+    category: "game",
+    status: "active",
+    priority: 80,
+    featured: false,
+    description: "A web chess game with a React/TypeScript frontend and a Python API integrating the pretrained Maia-3 model. Features legal-move highlights, move history, and human-versus-AI play.",
+    tags: ["React", "TypeScript", "FastAPI", "chess.js", "Maia-3"],
+    github: "https://github.com/shuwangs/KnightShift",
+    note: "Local prototype; selectable difficulty and playing styles are planned.",
+    previewLabel: "Human vs. AI chess",
+    previewSteps: ["Legal moves", "Move history", "Maia-3"],
+    image: "/image/KnightShift.png",
+    imageAlt: "KnightShift chess game interface"
+  },
+  {
     id: 8,
     title: "CaseForge",
     priority: 140,
@@ -67,6 +83,8 @@ export const projects = [
   {
     id: 1,
     title: "Boggle Word Game",
+    category: "game",
+    demoLabel: "Play",
     status: "completed",
     priority: 10,
     featured: false,
@@ -126,6 +144,8 @@ export const projects = [
   {
     id: 4,
     title: "Focus! Purr-grammer 🐈",
+    category: "game",
+    demoLabel: "Play",
     status: "completed",
     priority: 80,
     featured: false,

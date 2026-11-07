@@ -5,7 +5,8 @@ import './Projects.css';
 function Projects() {
   const sortedProjects = [...projects].sort((a, b) => b.priority - a.priority);
   const otherProjects = sortedProjects.filter(project => [9, 7].includes(project.id));
-  const earlierProjects = sortedProjects.filter(project => !project.featured && ![9, 7].includes(project.id));
+  const games = sortedProjects.filter(project => project.category === 'game');
+  const earlierProjects = sortedProjects.filter(project => !project.featured && project.category !== 'game' && ![9, 7].includes(project.id));
   return (
     <div className="projects-page-container">
       <section className="project-section" aria-labelledby="featured-heading">
@@ -37,6 +38,18 @@ function Projects() {
             </div>
           </div>
         </article>
+      </section>
+      <section className="project-section games-section" aria-labelledby="games-heading">
+        <header className="section-header">
+          <p className="section-eyebrow">Made for play</p>
+          <h2 id="games-heading">Games</h2>
+          <p>Small games exploring interactive interfaces, game logic, and AI opponents.</p>
+        </header>
+        <div className="projects-grid">
+          {games.map(project => (
+            <ProjectCard key={project.id} project={project} headingLevel="h3" />
+          ))}
+        </div>
       </section>
       <section className="project-section learning-section" aria-labelledby="learning-heading">
         <p className="section-eyebrow">Learning &amp; experiments</p>

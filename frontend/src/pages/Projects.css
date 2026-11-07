@@ -48,6 +48,9 @@
 .tools-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border); }
 .tools-section .section-header { margin-bottom: 24px; }
 .tools-section .section-header h2 { font-size: 1.7rem; }
+.games-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border); }
+.games-section .section-header { margin-bottom: 24px; }
+.games-section .section-header h2 { font-size: 1.7rem; }
 .tool-entry { display: flex; align-items: baseline; justify-content: space-between; gap: 32px; }
 .tool-entry h3 { margin: 0 0 10px; font-size: 1.15rem; letter-spacing: -.025em; }
 .tool-entry p { max-width: 680px; margin: 0 0 12px; color: var(--muted); font-size: .9rem; line-height: 1.8; }
