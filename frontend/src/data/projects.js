@@ -48,13 +48,13 @@ export const projects = [
     title: "Tails & Tales",
     priority: 120,
     featured: true,
-    description: "A full-stack pet diary with AI title suggestions, translation, and semantic search. Browse memories by date or meaning, with calendar filters that work alongside search results.",
+    description: "A full-stack pet diary with RAG-based Q&A, semantic search, AI title suggestions, and translation. Browse memories by date or meaning, and ask questions answered using relevant diary entries",
     tags: ["React", "Tailwind CSS", "Express", "PostgreSQL", "pgvector", "MiniLM"],
     github: "https://github.com/shuwangs/tails_tales",
     features: [
-      "Built a responsive React interface combining calendar filters with semantic search results",
-      "Implemented inline editing with cancel controls and draft preservation when saving fails",
-      "Integrated AI-assisted title suggestions and translation into the diary workflow",
+      "Built a responsive React interface with calendar filtering, semantic search, and a floating diary chat window",
+      "Implemented RAG-based Q&A using MiniLM embeddings, pgvector retrieval, and Gemini answer generation, with pet ownership checks before retrieval",
+      "Added inline editing with cancel controls and draft preservation when saving fails",
       "Implemented semantic retrieval using MiniLM embeddings and pgvector, with server-side embedding updates after edits",
       "Evaluated retrieval on 51 synthetic entries and 40 answerable queries, achieving 95% Recall@6 versus 87.5% for a TF-IDF baseline"
     ],
