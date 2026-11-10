@@ -1,8 +1,13 @@
 ---
 title: "Java Fundamentals - Questions"
+slug: java-fundamentals-questions
 date: 2026-11-10
 tags: [Java, Interview]
-description: "Fundamentasl of Java for SDET interview preparation."
+description: "Fundamentasl of Java for SDET interview preparation"
+category: "Software Engineering/interview"
+cover_image_url: null
+
+
 ---
 
 ## 1. What is the difference between Method Overloading and Method Overriding 

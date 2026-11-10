@@ -20,12 +20,12 @@ export const blogs = Object.entries(files).map(([path, source]) => {
   const metadata = load(match[1], { schema: JSON_SCHEMA }) || {};
   const slug = metadata.slug || path.split('/').pop().replace(/\.md$/, '');
   if (typeof metadata.title !== 'string' ||
-      typeof metadata.date !== 'string' ||
-      !/^\d{4}-\d{2}-\d{2}$/.test(metadata.date) ||
-      Number.isNaN(Date.parse(metadata.date)) ||
-      typeof slug !== 'string' || !/^[a-z0-9-]+$/.test(slug) ||
-      (metadata.tags !== undefined &&
-        (!Array.isArray(metadata.tags) || metadata.tags.some(tag => typeof tag !== 'string')))) {
+    typeof metadata.date !== 'string' ||
+    !/^\d{4}-\d{2}-\d{2}$/.test(metadata.date) ||
+    Number.isNaN(Date.parse(metadata.date)) ||
+    typeof slug !== 'string' || !/^[a-z0-9-]+$/.test(slug) ||
+    (metadata.tags !== undefined &&
+      (!Array.isArray(metadata.tags) || metadata.tags.some(tag => typeof tag !== 'string')))) {
     throw new Error(`Invalid blog metadata: ${path}`);
   }
   return {
