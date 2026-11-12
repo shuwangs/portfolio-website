@@ -1,7 +1,7 @@
 ---
 title: "React Fundamentals"
 slug: react-fundamentals-questions
-date: 2026-11-11
+date: 2026-11-12
 tags: [React, Interview, frontend]
 description: "Fundamentasl of REACT for interview preparation"
 category: "Software Engineering/interview"
@@ -191,8 +191,119 @@ function DiaryTitle({ title }) {
 }
 ```
 
+## Level 3 — User Interaction and Forms
+
+### 19. What are events in React?
+
+Events represent user interactions such as clicking, typing, or submitting a form. React uses camelCase event props such as `onClick`, `onChange`, and `onSubmit`.
+
+### 20. How do you handle an event?
+
+Pass a function as the event handler rather than calling it immediately during render.
+
+```jsx
+function SaveButton({ onSave }) {
+  return <button onClick={onSave}>Save</button>;
+}
+```
 
 
+### 21. How do you create forms in React?
+
+Forms use standard HTML inputs plus handlers for changes and submission. React can manage input values through state or read values from the form when submitted.
+
+```jsx
+function DiaryForm() {
+  const [title, setTitle] = useState('');
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(title);
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={title} onChange={e => setTitle(e.target.value)} />
+      <button type="submit">Save</button>
+    </form>
+  );
+}
+```
+
+### 22. What is the difference between controlled and uncontrolled inputs?
+
+A **controlled input** gets its current value from React state and reports changes through a handler. An **uncontrolled input** keeps its live value in the DOM, and the application can read it through form APIs or a ref.
+
+
+## Part 4 — Reuse, Performance, and Keys
+
+### 23. What are Synthetic Events?
+
+React provides an event interface that normalizes common event behavior across browsers. The handler receives an event object with methods such as `preventDefault()` and `stopPropagation()`.
+
+### 24. What are refs in React?
+
+A ref lets a component hold a mutable value or reference a DOM node without requiring that value to trigger a re-render. The `useRef` Hook is commonly used for DOM focus and persistent mutable values.
+
+### 25. When should you use refs?
+
+Use refs for focusing an input, measuring a DOM element, interacting with media, or integrating with an imperative third-party library. Do not use a ref as a replacement for state when a change should update the UI.
+```jsx
+const inputRef = useRef(null);
+<button onClick={() => inputRef.current?.focus()}>Focus</button>
+<input ref={inputRef} />
+```
+
+## Level 4 — State Lifecycles and Rendering
+
+### 26. What are the stages of a component's lifecycle?
+
+The main phases are **mount**, **update**, and **unmount**. In function components, rendering describes the UI, while effects can synchronize with external systems and perform cleanup when dependencies change or the component unmounts.
+
+
+### 27. How do lifecycle methods relate to Hooks?
+
+Older class components use methods such as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. Function components commonly use `useEffect` for synchronization with external systems.
+
+```jsx
+useEffect(() => {
+  const controller = new AbortController();
+  fetch('/api/diaries', { signal: controller.signal })
+    .then(res => res.json())
+    .then(setDiaries)
+    .catch(err => {
+      if (err.name !== 'AbortError') console.error(err);
+    });
+
+  return () => controller.abort();
+}, []);
+```
+
+## Part 3 — Events, Refs, and Forms
+
+### 28. What is the difference between the Real DOM and the Virtual DOM?  *(Original Q1)*
+
+The **real DOM** is the browser's actual representation of an HTML document. A **virtual DOM** is an in-memory description of what the UI should look like. React compares new and previous render results and commits the necessary changes to the real DOM.
+
+"React lets me describe the UI based on state. When state changes, React reconciles the updated tree and applies the required DOM changes. This helps me avoid manually manipulating the DOM."
+
+> The virtual DOM is **not automatically faster in every situation**, and its memory use is not necessarily lower than the real DOM's.
+
+### 29. How does the Virtual DOM work?
+
+When props or state change, React renders the affected components to produce an updated element tree. During **reconciliation**, it determines what changed; during the **commit phase**, it updates the DOM as needed. Stable keys help React preserve the identity of list items.
+
+
+
+### 30. Why are keys important when rendering lists?
+
+Keys give React stable identities for sibling elements. Use a stable identifier from your data, rather than an array index when items can be reordered, inserted, or deleted.
+
+```jsx
+{diaries.map(diary => (
+  <DiaryCard key={diary.id} diary={diary} />
+))}
+```
+
+Keys are not directly available as a normal `props.key` inside the child component.
 
 ## 🐡 One Last React Joke 🐠
 > 🌊 Why do React developers love fishing?
