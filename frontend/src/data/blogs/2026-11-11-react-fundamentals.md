@@ -179,3 +179,22 @@ function DiaryCard({ title, content }) {
   );
 }
 ```
+
+
+### 18. What is the purpose of `render()`?
+
+In a **class component**, `render()` returns the React elements to display. In a **function component**, the function body itself returns the UI. Rendering should be pure: for the same props and state, it should produce the same output and avoid side effects.
+
+```jsx
+function DiaryTitle({ title }) {
+  return <h2>{title}</h2>;
+}
+```
+
+
+
+
+## 🐡 One Last React Joke 🐠
+> 🌊 Why do React developers love fishing?
+>
+> Because they're already experts at using hooks! 🎣
