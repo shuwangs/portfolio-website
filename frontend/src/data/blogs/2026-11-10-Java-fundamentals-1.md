@@ -3,7 +3,7 @@ title: "Java Fundamentals - Questions"
 slug: java-fundamentals-questions
 date: 2026-11-10
 tags: [Java, Interview]
-description: "Fundamentasl of Java for SDET interview preparation"
+description: "Fundamentals of Java to check how much you understand"
 category: "Software Engineering/interview"
 cover_image_url: null
 
