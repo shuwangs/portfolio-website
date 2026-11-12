@@ -104,3 +104,78 @@ Keep related functionality in files or folders and use ES module `import` / `exp
 ### 12. What are props?
 
 Props are read-only inputs provided to a component by its parent. They let parents customize children without requiring the children to mutate parent data. A child can communicate upward by calling a callback function passed as a prop.
+
+### 13. What is state in React?
+
+State is data a component remembers between renders. Updating state tells React that the UI may need to change.
+
+```jsx
+const [isEditing, setIsEditing] = useState(false);
+```
+
+**Exaple in tails-tales** "I use state for information that changes through user interactions, such as the current draft, loading status, or whether an editor is open."
+
+### 14. What is the difference between props and state?
+
+| Props                                                | State                                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------- |
+| Received from a parent                               | Owned by a component (or shared through a state mechanism)        |
+| **Immutable**(read-only; the child cannot change it) | **Mutable** through React state setters or other state mechanisms |
+| Used to configure a component                        | Used for data that changes over time                              |
+| Re-renders when the parent passes new prop value     | Re-renders automatically when state is updated                    |
+
+Neither props nor state should be mutated directly.
+
+
+### 15. How do you update component state?
+
+Use a state setter such as `setCount`, rather than assigning to the variable directly. Use a functional update when the next state depends on the previous state.
+
+```jsx
+setCount(previous => previous + 1);
+```
+For objects and arrays, create updated copies rather than mutating the existing state.
+
+
+### 16. How are arrow functions useful in React?  *(Original Q18)*
+
+Arrow functions provide concise callback syntax and capture the lexical `this` value. 
+They are often used in event handlers and array transformations.
+
+```jsx
+<button onClick={() => setIsEditing(true)}>Edit</button>
+```
+
+> ***key point*** 在 JavaScript 中，普通函数的 this 取决于它如何被调用，而箭头函数的 this 来自外层作用域。
+> A regular function's this depends on how the function is called, while an arrow function inherits this from its surrounding lexical scope.
+
+### 17. What is the difference between stateful and stateless components?
+
+Historically, this referred to class components with state versus function components without state. Today, **function components can also have state using Hooks**. The more useful distinction is whether a component owns state or receives all necessary data through props.
+
+> - Stateful Component：有自己的 State，可以管理数据变化。
+> - Stateless Component：不管理自己的 State，通常通过 Props 接收数据并显示。
+
+-  Stateless Component
+```js
+function DiaryCard({ title, content }) {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <p>{content}</p>
+    </div>
+  );
+}
+```
+-  Statefull Component
+```js
+function DiaryCard({ title, content }) {
+  const [isEditing, setIsEditing] = useState(false);
+
+  return (
+    <div>
+       Content
+    </div>
+  );
+}
+```

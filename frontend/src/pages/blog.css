@@ -142,6 +142,24 @@
 .blog-post pre code { background: transparent; padding: 0; }
 .blog-post img { max-width: 100%; height: auto; }
 
+.blog-table-scroll {
+  margin: 24px 0;
+  overflow-x: auto;
+}
+.blog-post table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.blog-post th,
+.blog-post td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+  min-width: 140px;
+}
+.blog-post th { background: var(--rose-soft); }
+.blog-post tbody tr:nth-child(even) { background: var(--surface); }
+
 @media (min-width: 720px) {
   .blog-card {
     grid-column: span 12;

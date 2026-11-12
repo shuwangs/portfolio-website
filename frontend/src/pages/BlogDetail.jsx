@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown, { defaultUrlTransform } from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { blogs, formatBlogDate, resolveBlogImage } from '../data/blogs';
 import './blog.css';
 
@@ -23,7 +24,9 @@ const BlogDetail = () => {
         <p className="meta">Published on <time dateTime={post.date}>{formatBlogDate(post.date)}</time></p>
       </header>
       <hr />
-      <div className="content"><ReactMarkdown urlTransform={(url, key, node) => {
+      <div className="content"><ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+        table: ({ children }) => <div className="blog-table-scroll"><table>{children}</table></div>,
+      }} urlTransform={(url, key, node) => {
         const safeUrl = defaultUrlTransform(url);
         return node.tagName === 'img' && key === 'src'
           ? resolveBlogImage(safeUrl)
