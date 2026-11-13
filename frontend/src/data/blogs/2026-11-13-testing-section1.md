@@ -4,7 +4,7 @@ date: 2026-11-13
 tags: [SDET, Automation, Testing]
 description: ""
 ---
-> 🧪 the palest ink is better than the best memory (idiom)
+> 🧪 the palest ink is better than the best memory ✍️
 ## Software Testing 
 Software Testing is a critical phase of the Software Development Life Cycle (SDLC) that ensures a software application works correctly and meets user requirements.
 
@@ -75,10 +75,13 @@ which the functionality of an application is tested without knowledge of its int
 - Sanity Testing
     Performs a focused validation of specific changes or bug fixes to ensure they work as expected.
 - Regression Testing
-   Verifies that recent changes or bug fix have not affected existing functionalities
+   Verifies that recent changes or bug fix haven't negatively affected existing.functionalities
 - Retesting
+    Verify whether a previously reported defect has been successfully fixed. 
 - API Testing
-- Interace Testing
+    Verify API functionality by validating requests, responses, data exchange and business logic.
+- Interface Testing
+    Verify whether different systems or components communicate and exchange data correctly.
 
 
 #### Non-Functional Testing
