@@ -59,42 +59,54 @@ which the functionality of an application is tested without knowledge of its int
   
 ### Types Based on Testing Level
 #### Unit Testing
+- Verify individual units or components independently
+- Usually performed by developers.
 
 #### Integration Testing
+- Verify whether different modules or components work correctly together.
+- tests interactions between integrated components.
+- Verify data flow and communication between modules.
+- Helps identify interface and integration defects.
 
 #### System Testing
-
+- Evaluates the complete and integrated application as a whole 
+- verify functional and nonfunctional requirements.
+- identifies defects in the overall system behaviors
 #### Acceptance Testing
+verify whether the software meets business and user requirements before release or deployment
+- validate the software against business requirements
+- often performed by users, clients, or business stakeholders
+- Determines whether the software is ready to use.
 
 
 ### Types based on Testing Purpose
 #### Functional Testing
 > Whether the software functions meet the specified business requirements.
-- Smoke Testing
+- Smoke Testing 
   Checks the basic and critical functionalities of a new build to determine whether it is stable enough for further testing.
-- Sanity Testing
+- Sanity Testing 
     Performs a focused validation of specific changes or bug fixes to ensure they work as expected.
-- Regression Testing
+- Regression Testing 
    Verifies that recent changes or bug fix haven't negatively affected existing.functionalities
-- Retesting
+- Retesting 
     Verify whether a previously reported defect has been successfully fixed. 
-- API Testing
+- API Testing 
     Verify API functionality by validating requests, responses, data exchange and business logic.
-- Interface Testing
+- Interface Testing 
     Verify whether different systems or components communicate and exchange data correctly.
 
 
 #### Non-Functional Testing
 > Evaluates how well the software performs under different conditions. It focuses on quality attributes such as performance, security, usability, reliability, and scalability.
 
-- Performance Testing:
+- Performance Testing: 
     Evaluates the speed, responsiveness, and stability of an application under different workloads.
 - Security Testing
   
     Identifies vulnerabilities and weaknesses that could compromise the application's security.
-- Usability Testing
+- Usability Testing 
     Evaluates how easy and intuitive the application is for users.
-- Reliability Testing
+- Reliability Testing 
     Verifies whether the software performs consistently over a specified period.    
-- Compatibility Testing 
+- Compatibility Testing  
     Verifies that the application works correctly across different browsers, devices, operating systems, and environments.
