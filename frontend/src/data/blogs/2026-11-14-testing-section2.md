@@ -79,3 +79,6 @@ An open-source tool used for performance and load testing
 
 
 ## Page Object Model (POM)
+>treats each web page or UI screen as an object-oriented class
+Imagine you have a login page on your website. Using the POM approach, you would create a `LoginPage` class that includes methods for entering the username, password, and clicking the login button. The test scripts interact with the `LoginPage` class to perform login actions, which makes the tests more maintainable and readable. 
+
