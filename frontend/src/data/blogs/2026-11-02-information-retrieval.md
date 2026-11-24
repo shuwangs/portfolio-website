@@ -2,7 +2,7 @@
 title: "Information Retrieval behind the TailTales"
 slug: information-retrieval-behind-tailtales
 date: 2026-11-02
-tags: [Information Retrieval, Semantic Search, Vector Search, PostgreSQL, pgvector, Cosine Similarity]
+tags: [AI, Information Retrieval, Semantic Search, Vector Search, PostgreSQL, pgvector, Cosine Similarity]
 category: "Software Engineering"
 summary: "How I built semantic search for TailTales using vector embeddings, PostgreSQL, and pgvector—and evaluated it against a TF-IDF baseline."
 cover_image_url: null

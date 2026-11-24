@@ -2,7 +2,7 @@
 title: "React Fundamentals"
 slug: react-fundamentals-questions
 date: 2026-11-12
-tags: [React, Interview, frontend]
+tags: [React, Interview]
 description: "Fundamentasl of REACT for interview preparation"
 category: "Software Engineering/interview"
 cover_image_url: null

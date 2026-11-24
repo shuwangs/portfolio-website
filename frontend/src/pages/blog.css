@@ -179,3 +179,25 @@
 .blog-container > h1, .page-title { max-width: 960px; text-align: left; }
 .blog-container > h1::after, .page-title::after { margin-left: 0; }
 .blog-grid { max-width: 960px; }
+
+.blog-header { width: 100%; max-width: 1120px; }
+.blog-layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); align-items: start; gap: 32px; width: 100%; max-width: 1120px; }
+.blog-layout .blog-grid { min-width: 0; }
+.blog-filters { min-width: 0; padding: 4px 20px 12px 0; border-right: 1px solid var(--border); }
+.blog-filters h2 { margin: 0 0 14px; font-size: .72rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.blog-filter-options { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 6px; }
+.blog-filter-button { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; max-width: 100%; padding: 4px 8px; border: 1px solid var(--border); border-radius: 5px; background: transparent; color: var(--muted); font: inherit; font-size: .72rem; line-height: 1.4; cursor: pointer; overflow-wrap: anywhere; }
+.blog-filter-button span { font-size: .65rem; opacity: .8; }
+.blog-filter-button:hover { border-color: var(--rose); color: var(--rose-deep); background: var(--rose-soft); }
+.blog-filter-button[aria-pressed="true"] { background: var(--rose-soft); color: var(--rose-deep); border-color: var(--rose); font-weight: 650; }
+.blog-filter-button:focus-visible, .blog-filter-reset:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+.blog-filter-summary { margin: 16px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.6; overflow-wrap: anywhere; }
+.blog-filter-reset { border: 0; background: transparent; color: var(--rose-deep); font: inherit; padding: 8px; text-decoration: underline; cursor: pointer; }
+.blog-card .tags { gap: 5px; }
+.blog-card .tag { padding: 3px 7px; border-radius: 5px; font-size: .7rem; line-height: 1.4; }
+@media (max-width: 700px) {
+  .blog-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .blog-filters { padding: 0 0 20px; border-right: 0; border-bottom: 1px solid var(--border); }
+  .blog-filter-options { gap: 8px; }
+  .blog-filter-button { min-height: 32px; }
+}
